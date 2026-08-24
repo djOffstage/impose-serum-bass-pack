@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "chrome-split",
+  "n": 12,
+  "name": "Chrome Split",
+  "slug": "IMPOSE_12_Chrome_Split",
+  "category": "reese",
+  "tags": [
+    "wide",
+    "stereo",
+    "peak"
+  ],
+  "key": "G",
+  "bpm": 128,
+  "description": "Hard-panned dual saws. Huge on headphones, still has a mono sub.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 7,
+      "detune": 22,
+      "blend": 70,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.55
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 11,
+      "pan": -30,
+      "wavetable": "Dirty Saw",
+      "level": 0.22
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -2,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.36
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "560 Hz",
+      "reso": 14,
+      "drive": 12,
+      "envAmt": "+18%"
+    },
+    "env1": {
+      "a": "7 ms",
+      "d": "220 ms",
+      "s": 0.85,
+      "r": "180 ms"
+    },
+    "env2": {
+      "a": "4 ms",
+      "d": "280 ms",
+      "s": 0.28,
+      "r": "140 ms"
+    },
+    "lfo1": {
+      "rate": "1/4",
+      "shape": "Triangle",
+      "dest": "OSC B Pan",
+      "amount": "20%"
+    },
+    "fx": [
+      "Hyper / Dimension Mix 22",
+      "Chorus Mix 16",
+      "Compressor 3:1",
+      "Utility mono < 120 Hz"
+    ],
+    "macros": [
+      "Drive → Sat",
+      "Width → Hyper + Unison",
+      "Dark → Cutoff",
+      "Spread → OSC B pan"
+    ],
+    "matrix": [
+      "LFO 1 → OSC B Pan"
+    ],
+    "notes": "Check in mono — the sub must survive."
+  }
+}
