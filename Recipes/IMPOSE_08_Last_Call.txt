@@ -1,0 +1,57 @@
+IMPOSE  08  LAST CALL
+File        : IMPOSE_08_Last_Call
+Category    : Sub / Round
+Key         : D     Tempo hint 116 BPM
+Tags        : dusty, delay, closer
+
+Tired round bass with a dotted delay ghost. Last-song material.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.66    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine -12
+  Level     : 0.18    Pan 18
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 210 Hz    Reso 12
+  Drive 8    Env Amt +12%
+
+ENV 1 (amp)     A 24 ms   D 400 ms   S 0.76   R 420 ms
+ENV 2 (filter)  A 12 ms   D 480 ms   S 0.22   R 260 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest Delay Mix    Amt 6%
+
+FX RACK
+  1. Delay — 1/8 dotted, Mix 16, Feedback 32, HP 200
+  2. Chorus — Mix 12
+  3. Tape sat 18
+
+MACROS
+  1 Drive → Sat
+  2 Width → OSC B pan
+  3 Dark → Cutoff
+  4 Space → Delay mix
+
+MOD MATRIX
+  • LFO 1 → Delay Mix
+
+NOTES
+  Mute delay on the last bar of a phrase.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_08_Last_Call.SerumPreset
