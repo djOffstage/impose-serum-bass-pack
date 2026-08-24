@@ -1,0 +1,58 @@
+IMPOSE  04  AFTERHOURS
+File        : IMPOSE_04_Afterhours
+Category    : Hum / Organic
+Key         : G     Tempo hint 118 BPM
+Tags        : warm, late night, chorus
+
+Dusty round bass, slow chorus, tape-like saturation. 2am closer.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0.35
+  Warp      : Off  0
+  Unison    : 2    Detune 6    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.58    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine -5
+  Level     : 0.24    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample Organics / AC hum1    Level 0.08    LP 300 Hz
+
+FILTER
+  Type MS2 Low 24    Cutoff 270 Hz    Reso 12
+  Drive 14    Env Amt +20%
+
+ENV 1 (amp)     A 22 ms   D 360 ms   S 0.8   R 360 ms
+ENV 2 (filter)  A 10 ms   D 480 ms   S 0.25   R 240 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest Chorus Mix    Amt 6%
+
+FX RACK
+  1. Distortion — Tape, Drive 24, Mix 30
+  2. Chorus — Mix 22
+  3. Delay — 1/4, Mix 10
+  4. Reverb — Room 6%
+
+MACROS
+  1 Drive → Tape
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Hum → Noise
+
+MOD MATRIX
+  • Env 2 → Filter
+
+NOTES
+  Longer release. Let it bloom into the next chord.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_04_Afterhours.SerumPreset
