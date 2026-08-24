@@ -1,0 +1,62 @@
+IMPOSE  22  CHROME WOBBLE
+File        : IMPOSE_22_Chrome_Wobble
+Category    : Wobble / Move
+Key         : A#     Tempo hint 140 BPM
+Tags        : lfo, 1/4, dub
+
+Quarter-note filter wobble, metallic saw. Hold a note and ride Dark.
+
+OSC A
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 5    Detune 14    Blend 50
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.6    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.3
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.2    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.3    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 460 Hz    Reso 28
+  Drive 18    Env Amt +8%
+
+ENV 1 (amp)     A 6 ms   D 200 ms   S 0.86   R 160 ms
+ENV 2 (filter)  A 4 ms   D 180 ms   S 0.4   R 120 ms
+
+LFO 1
+  Rate 1/4    Shape Triangle
+  Dest Filter Cutoff    Amt 55%
+
+FX RACK
+  1. Distortion Tube 28 / 40
+  2. Chorus Mix 10
+  3. Compressor 4:1
+
+MACROS
+  1 Drive → Tube
+  2 Width → Unison
+  3 Dark → Cutoff offset
+  4 Rate → LFO rate (1/4–1/16)
+
+MOD MATRIX
+  • LFO 1 → Filter Cutoff (bipolar)
+
+NOTES
+  Lock LFO to host. Change rate to 1/8 for half-time drops.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_22_Chrome_Wobble.SerumPreset
