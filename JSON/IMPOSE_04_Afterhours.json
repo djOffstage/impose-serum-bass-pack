@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "afterhours",
+  "n": 4,
+  "name": "Afterhours",
+  "slug": "IMPOSE_04_Afterhours",
+  "category": "hum",
+  "tags": [
+    "warm",
+    "late night",
+    "chorus"
+  ],
+  "key": "G",
+  "bpm": 118,
+  "description": "Dusty round bass, slow chorus, tape-like saturation. 2am closer.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.35,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 2,
+      "detune": 6,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.58
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": -5,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.24
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": true,
+      "sample": "Organics / AC hum1",
+      "level": 0.08,
+      "lp": "300 Hz"
+    },
+    "filter": {
+      "type": "MS2 Low 24",
+      "cutoff": "270 Hz",
+      "reso": 12,
+      "drive": 14,
+      "envAmt": "+20%"
+    },
+    "env1": {
+      "a": "22 ms",
+      "d": "360 ms",
+      "s": 0.8,
+      "r": "360 ms"
+    },
+    "env2": {
+      "a": "10 ms",
+      "d": "480 ms",
+      "s": 0.25,
+      "r": "240 ms"
+    },
+    "lfo1": {
+      "rate": "1/2",
+      "shape": "Sine",
+      "dest": "Chorus Mix",
+      "amount": "6%"
+    },
+    "fx": [
+      "Distortion — Tape, Drive 24, Mix 30",
+      "Chorus — Mix 22",
+      "Delay — 1/4, Mix 10",
+      "Reverb — Room 6%"
+    ],
+    "macros": [
+      "Drive → Tape",
+      "Width → Chorus",
+      "Dark → Cutoff",
+      "Hum → Noise"
+    ],
+    "matrix": [
+      "Env 2 → Filter"
+    ],
+    "notes": "Longer release. Let it bloom into the next chord."
+  }
+}
