@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "night-bus",
+  "n": 5,
+  "name": "Night Bus",
+  "slug": "IMPOSE_05_Night_Bus",
+  "category": "sub",
+  "tags": [
+    "tech house",
+    "round",
+    "126"
+  ],
+  "key": "C",
+  "bpm": 126,
+  "description": "Clean round tech-house sub. Sine + barely-there saw. Translates on a club system.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.78
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 2,
+      "detune": 3,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.18
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "170 Hz",
+      "reso": 8,
+      "drive": 8,
+      "envAmt": "+16%"
+    },
+    "env1": {
+      "a": "6 ms",
+      "d": "180 ms",
+      "s": 0.9,
+      "r": "140 ms"
+    },
+    "env2": {
+      "a": "3 ms",
+      "d": "220 ms",
+      "s": 0.35,
+      "r": "100 ms"
+    },
+    "lfo1": {
+      "rate": "Off",
+      "shape": "Sine",
+      "dest": "—",
+      "amount": "0"
+    },
+    "fx": [
+      "EQ — Low shelf +1.5 @ 60, HP 28 Hz",
+      "Compressor — 3:1, slow",
+      "Utility — Mono below 140 Hz"
+    ],
+    "macros": [
+      "Drive → Soft clip",
+      "Width → OSC B level",
+      "Dark → Cutoff",
+      "Click → Env2 amt"
+    ],
+    "matrix": [
+      "Env 2 → Filter Cutoff"
+    ],
+    "notes": "The saw is only there so the sub reads on small speakers. Keep it mono under 140 Hz."
+  }
+}
