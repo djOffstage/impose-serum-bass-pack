@@ -1,0 +1,112 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "deep-fold",
+  "n": 21,
+  "name": "Deep Fold",
+  "slug": "IMPOSE_21_Deep_Fold",
+  "category": "distort",
+  "tags": [
+    "wavefold",
+    "west coast",
+    "odd"
+  ],
+  "key": "E",
+  "bpm": 122,
+  "description": "West-coast fold on a sine. Harmonics bloom as you lean on Drive.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Bend +/-",
+      "warpAmt": 0.08,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.74
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 5,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.18
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "880 Hz",
+      "reso": 10,
+      "drive": 8,
+      "envAmt": "+18%"
+    },
+    "env1": {
+      "a": "6 ms",
+      "d": "220 ms",
+      "s": 0.84,
+      "r": "180 ms"
+    },
+    "env2": {
+      "a": "4 ms",
+      "d": "260 ms",
+      "s": 0.3,
+      "r": "140 ms"
+    },
+    "lfo1": {
+      "rate": "1/4",
+      "shape": "Sine",
+      "dest": "Fold drive",
+      "amount": "14%"
+    },
+    "fx": [
+      "Distortion Fold Drive 62 Mix 80",
+      "EQ HP 40",
+      "Compressor 3:1",
+      "Delay 1/8 Mix 8"
+    ],
+    "macros": [
+      "Drive → Fold (this is the patch)",
+      "Width → Delay",
+      "Dark → Cutoff",
+      "Shimmer → OSC B"
+    ],
+    "matrix": [
+      "LFO 1 → Dist Drive",
+      "Macro 1 → Warp Amt"
+    ],
+    "notes": "Play with one finger and ride Macro 1. The fold is the melody."
+  }
+}
