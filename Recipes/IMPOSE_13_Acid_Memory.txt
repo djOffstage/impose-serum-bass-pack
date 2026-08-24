@@ -1,0 +1,53 @@
+IMPOSE  13  ACID MEMORY
+File        : IMPOSE_13_Acid_Memory
+Category    : Acid / 303
+Key         : C     Tempo hint 126 BPM
+Tags        : 303, resonance, house
+
+303-style square with a hungry filter envelope. Classic acid, not cartoon.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0.32
+  Warp      : PWM  0.18
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.78    Pan 0
+OSC B
+  Off
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type Acid / MG Low 24    Cutoff 360 Hz    Reso 62
+  Drive 28    Env Amt +78%
+
+ENV 1 (amp)     A 2 ms   D 120 ms   S 0.7   R 80 ms
+ENV 2 (filter)  A 1 ms   D 180 ms   S 0.08   R 60 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion — Acid / Diode 34 / 45
+  2. EQ — 300 Hz dip if it honks
+  3. Delay 1/8 dotted Mix 8
+
+MACROS
+  1 Drive → Dist + Filter Drive
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Squelch → Reso
+
+MOD MATRIX
+  • Env 2 → Filter Cutoff (main)
+  • Accent (vel) → Env2 amt
+
+NOTES
+  Program 16th sequences with accent on offbeats. Env 2 is the instrument.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_13_Acid_Memory.SerumPreset
