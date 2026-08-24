@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "grid-voltage",
+  "n": 3,
+  "name": "Grid Voltage",
+  "slug": "IMPOSE_03_Grid_Voltage",
+  "category": "hum",
+  "tags": [
+    "industrial",
+    "60Hz",
+    "mono"
+  ],
+  "key": "F",
+  "bpm": 128,
+  "description": "60 Hz harmonic stack beating against a slightly sharp saw. Warehouse tension.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.08,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 2,
+      "detune": 5,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Dirty Saw",
+      "level": 0.62
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 3,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.22
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": true,
+      "sample": "Organics / AC hum1",
+      "level": 0.2,
+      "lp": "500 Hz"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "230 Hz",
+      "reso": 22,
+      "drive": 28,
+      "envAmt": "+24%"
+    },
+    "env1": {
+      "a": "6 ms",
+      "d": "180 ms",
+      "s": 0.88,
+      "r": "160 ms"
+    },
+    "env2": {
+      "a": "2 ms",
+      "d": "260 ms",
+      "s": 0.3,
+      "r": "120 ms"
+    },
+    "lfo1": {
+      "rate": "1/8",
+      "shape": "Sine",
+      "dest": "OSC B Fine",
+      "amount": "4 cents"
+    },
+    "fx": [
+      "Distortion — Diode, Drive 40, Mix 48",
+      "EQ — 60 Hz +1.5, 120 Hz +1",
+      "Compressor — 6:1"
+    ],
+    "macros": [
+      "Drive → Dist",
+      "Width → Unison",
+      "Dark → Cutoff",
+      "Hum → Noise"
+    ],
+    "matrix": [
+      "LFO 1 → OSC B Fine"
+    ],
+    "notes": "Keep it mono. The beating is the point."
+  }
+}
