@@ -1,0 +1,112 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "analog-spine",
+  "n": 24,
+  "name": "Analog Spine",
+  "slug": "IMPOSE_24_Analog_Spine",
+  "category": "wobble",
+  "tags": [
+    "pwm",
+    "juno",
+    "moving"
+  ],
+  "key": "C",
+  "bpm": 126,
+  "description": "PWM bass with a slow pulse-width LFO. The backbone of a 126 track.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.22,
+      "warp": "PWM",
+      "warpAmt": 0.35,
+      "unison": 2,
+      "detune": 5,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "PWM",
+      "level": 0.68
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 4,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.2
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -2,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.32
+    },
+    "noise": {
+      "on": true,
+      "sample": "Organics / AC hum1",
+      "level": 0.05,
+      "lp": "280 Hz"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "320 Hz",
+      "reso": 16,
+      "drive": 14,
+      "envAmt": "+28%"
+    },
+    "env1": {
+      "a": "8 ms",
+      "d": "240 ms",
+      "s": 0.86,
+      "r": "200 ms"
+    },
+    "env2": {
+      "a": "4 ms",
+      "d": "300 ms",
+      "s": 0.3,
+      "r": "160 ms"
+    },
+    "lfo1": {
+      "rate": "1/2",
+      "shape": "Sine",
+      "dest": "OSC A Warp (PWM)",
+      "amount": "35%"
+    },
+    "fx": [
+      "Chorus Mix 12 (Juno-ish)",
+      "Tape 20 / 28",
+      "Compressor 3:1",
+      "Delay 1/8 Mix 6"
+    ],
+    "macros": [
+      "Drive → Tape",
+      "Width → Chorus + Unison",
+      "Dark → Cutoff",
+      "PWM → Warp amt"
+    ],
+    "matrix": [
+      "LFO 1 → OSC A Warp",
+      "Env 2 → Filter"
+    ],
+    "notes": "Closest cousin to Memories Imposing without the loud hum. A 126 default bass."
+  }
+}
