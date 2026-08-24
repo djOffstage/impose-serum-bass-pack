@@ -1,0 +1,53 @@
+IMPOSE  16  CONCRETE 808
+File        : IMPOSE_16_Concrete_808
+Category    : 808 / Punch
+Key         : C     Tempo hint 128 BPM
+Tags        : 808, punch, trap-house
+
+Sine 808 with a pitch drop. Hard enough for trap, round enough for house.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.92    Pan 0
+OSC B
+  Off
+OSC C
+  Off
+NOISE
+  On    Sample One-shots / Click short    Level 0.08    LP 2.2 kHz
+
+FILTER
+  Type MG Low 12    Cutoff 170 Hz    Reso 6
+  Drive 10    Env Amt +8%
+
+ENV 1 (amp)     A 0 ms   D 420 ms   S 0.32   R 280 ms
+ENV 2 (filter)  A 0 ms   D 70 ms   S 0   R 40 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion Tape 18 / 22
+  2. Compressor 4:1, Attack 8 ms
+  3. EQ 50 Hz +2
+
+MACROS
+  1 Drive → Tape
+  2 Punch → Pitch env amt
+  3 Dark → Cutoff
+  4 Click → Noise
+
+MOD MATRIX
+  • Env 2 → OSC A Pitch (+12 to +19 st)
+  • Env 1 → Amp (exponential)
+
+NOTES
+  Tune per track. Pitch env is Env 2 → pitch, 50–80 ms decay.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_16_Concrete_808.SerumPreset
