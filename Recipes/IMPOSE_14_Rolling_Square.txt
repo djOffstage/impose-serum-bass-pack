@@ -1,0 +1,58 @@
+IMPOSE  14  ROLLING SQUARE
+File        : IMPOSE_14_Rolling_Square
+Category    : Acid / 303
+Key         : F     Tempo hint 126 BPM
+Tags        : house, 16ths, groove
+
+Less resonant than Acid Memory. Rolls under a 126 groove without stealing the hats.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0.3
+  Warp      : PWM  0.14
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.7    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.16    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 420 Hz    Reso 38
+  Drive 18    Env Amt +55%
+
+ENV 1 (amp)     A 3 ms   D 140 ms   S 0.74   R 100 ms
+ENV 2 (filter)  A 2 ms   D 220 ms   S 0.16   R 80 ms
+
+LFO 1
+  Rate 1/16    Shape Saw
+  Dest Filter Cutoff    Amt 10%
+
+FX RACK
+  1. Distortion Tube 24 / 32
+  2. Delay 1/16 Mix 6
+  3. Compressor 3:1
+
+MACROS
+  1 Drive → Tube
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Roll → LFO amt
+
+MOD MATRIX
+  • LFO 1 → Filter
+  • Env 2 → Filter
+
+NOTES
+  Sequence in 16ths, leave gaps. The saw just thickens the square.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_14_Rolling_Square.SerumPreset
