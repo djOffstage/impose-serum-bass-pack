@@ -1,0 +1,59 @@
+IMPOSE  21  DEEP FOLD
+File        : IMPOSE_21_Deep_Fold
+Category    : Distort / Growl
+Key         : E     Tempo hint 122 BPM
+Tags        : wavefold, west coast, odd
+
+West-coast fold on a sine. Harmonics bloom as you lean on Drive.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Bend +/-  0.08
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.74    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 5
+  Level     : 0.18    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 880 Hz    Reso 10
+  Drive 8    Env Amt +18%
+
+ENV 1 (amp)     A 6 ms   D 220 ms   S 0.84   R 180 ms
+ENV 2 (filter)  A 4 ms   D 260 ms   S 0.3   R 140 ms
+
+LFO 1
+  Rate 1/4    Shape Sine
+  Dest Fold drive    Amt 14%
+
+FX RACK
+  1. Distortion Fold Drive 62 Mix 80
+  2. EQ HP 40
+  3. Compressor 3:1
+  4. Delay 1/8 Mix 8
+
+MACROS
+  1 Drive → Fold (this is the patch)
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Shimmer → OSC B
+
+MOD MATRIX
+  • LFO 1 → Dist Drive
+  • Macro 1 → Warp Amt
+
+NOTES
+  Play with one finger and ride Macro 1. The fold is the melody.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_21_Deep_Fold.SerumPreset
