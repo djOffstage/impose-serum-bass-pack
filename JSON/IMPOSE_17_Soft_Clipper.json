@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "soft-clipper",
+  "n": 17,
+  "name": "Soft Clipper",
+  "slug": "IMPOSE_17_Soft_Clipper",
+  "category": "eight",
+  "tags": [
+    "808",
+    "saturated",
+    "loud"
+  ],
+  "key": "F",
+  "bpm": 130,
+  "description": "Same 808 body, pushed into soft clip so it stays loud on small speakers.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.88
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.08,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.16
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": true,
+      "sample": "One-shots / Click short",
+      "level": 0.06,
+      "lp": "1.8 kHz"
+    },
+    "filter": {
+      "type": "MG Low 12",
+      "cutoff": "210 Hz",
+      "reso": 8,
+      "drive": 16,
+      "envAmt": "+10%"
+    },
+    "env1": {
+      "a": "0 ms",
+      "d": "380 ms",
+      "s": 0.4,
+      "r": "240 ms"
+    },
+    "env2": {
+      "a": "0 ms",
+      "d": "60 ms",
+      "s": 0,
+      "r": "30 ms"
+    },
+    "lfo1": {
+      "rate": "Off",
+      "shape": "Sine",
+      "dest": "—",
+      "amount": "0"
+    },
+    "fx": [
+      "Distortion — Soft clip Drive 44 Mix 62",
+      "Compressor 5:1",
+      "EQ 90 Hz +1.5"
+    ],
+    "macros": [
+      "Drive → Clip",
+      "Punch → Pitch env",
+      "Dark → Cutoff",
+      "Click → Noise"
+    ],
+    "matrix": [
+      "Env 2 → OSC A Pitch"
+    ],
+    "notes": "Gain-stage so the clipper is the loudness, not the channel fader."
+  }
+}
