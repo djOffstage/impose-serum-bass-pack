@@ -1,0 +1,62 @@
+IMPOSE  06  WAREHOUSE PILLAR
+File        : IMPOSE_06_Warehouse_Pillar
+Category    : Sub / Round
+Key         : F     Tempo hint 128 BPM
+Tags        : huge, mono, peak time
+
+A column of sub. Slight clip, almost no mid. Drop this under a perc loop.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.85    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.08
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.14    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.4    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 12    Cutoff 130 Hz    Reso 6
+  Drive 18    Env Amt +10%
+
+ENV 1 (amp)     A 4 ms   D 140 ms   S 0.92   R 120 ms
+ENV 2 (filter)  A 2 ms   D 180 ms   S 0.4   R 80 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion — Soft clip, Drive 22, Mix 30
+  2. Compressor — 5:1
+  3. Utility — Force mono
+
+MACROS
+  1 Drive → Clip
+  2 Width → (leave at 0)
+  3 Dark → Cutoff
+  4 Sub → OSC C
+
+MOD MATRIX
+  • Vel → Amp slightly
+
+NOTES
+  OSC C is the true sub. Do not unison it.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_06_Warehouse_Pillar.SerumPreset
