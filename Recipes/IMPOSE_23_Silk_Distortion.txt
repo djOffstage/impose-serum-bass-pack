@@ -1,0 +1,58 @@
+IMPOSE  23  SILK DISTORTION
+File        : IMPOSE_23_Silk_Distortion
+Category    : Wobble / Move
+Key         : F     Tempo hint 120 BPM
+Tags        : slow, lfo, warm
+
+Slow sine on the filter, gentle tape. Hypnotic rather than wobbly.
+
+OSC A
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 3    Detune 8    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.56    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.26    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MS2 Low 24    Cutoff 340 Hz    Reso 18
+  Drive 12    Env Amt +10%
+
+ENV 1 (amp)     A 22 ms   D 320 ms   S 0.86   R 300 ms
+ENV 2 (filter)  A 12 ms   D 400 ms   S 0.4   R 220 ms
+
+LFO 1
+  Rate 1/1    Shape Sine
+  Dest Filter Cutoff    Amt 40%
+
+FX RACK
+  1. Distortion Tape 26 / 36
+  2. Chorus Mix 16
+  3. Delay 1/4 Mix 10
+  4. Reverb 6%
+
+MACROS
+  1 Drive → Tape
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Swim → LFO amt
+
+MOD MATRIX
+  • LFO 1 → Filter
+
+NOTES
+  One-bar LFO. Works as a pad-bass under chords.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_23_Silk_Distortion.SerumPreset
