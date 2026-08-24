@@ -1,0 +1,58 @@
+IMPOSE  10  MONO NERVE
+File        : IMPOSE_10_Mono_Nerve
+Category    : Reese / Neuro
+Key         : C     Tempo hint 134 BPM
+Tags        : tight, mid, mono
+
+Reese folded into mono. Aggressive mid, no stereo smear.
+
+OSC A
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 3    Detune 9    Blend 30
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.66    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.32
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 9
+  Level     : 0.3    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 620 Hz    Reso 22
+  Drive 24    Env Amt +30%
+
+ENV 1 (amp)     A 4 ms   D 160 ms   S 0.86   R 120 ms
+ENV 2 (filter)  A 2 ms   D 220 ms   S 0.25   R 100 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion — Diode 38 / 50
+  2. EQ — 700 Hz +1, 3k −2
+  3. Compressor 6:1
+  4. Utility — Mono
+
+MACROS
+  1 Drive → Diode
+  2 Width → Unison (keep low)
+  3 Dark → Cutoff
+  4 Mid → EQ 700
+
+MOD MATRIX
+  • Env 2 → Filter
+
+NOTES
+  Designed to sit under a vocal without stereo fight.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_10_Mono_Nerve.SerumPreset
