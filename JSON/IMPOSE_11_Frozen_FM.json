@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "frozen-fm",
+  "n": 11,
+  "name": "Frozen FM",
+  "slug": "IMPOSE_11_Frozen_FM",
+  "category": "reese",
+  "tags": [
+    "fm",
+    "metallic",
+    "cold"
+  ],
+  "key": "E",
+  "bpm": 140,
+  "description": "Bell-adjacent FM bass. Icy, useful as a mid-bass over a sine sub.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "FM (from B)",
+      "warpAmt": 0.42,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.64
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -2,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.34
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "700 Hz",
+      "reso": 18,
+      "drive": 10,
+      "envAmt": "+34%"
+    },
+    "env1": {
+      "a": "3 ms",
+      "d": "180 ms",
+      "s": 0.7,
+      "r": "160 ms"
+    },
+    "env2": {
+      "a": "1 ms",
+      "d": "220 ms",
+      "s": 0.18,
+      "r": "120 ms"
+    },
+    "lfo1": {
+      "rate": "1/8",
+      "shape": "Sine",
+      "dest": "Warp Amt",
+      "amount": "8%"
+    },
+    "fx": [
+      "EQ — 1.2k +1.5 metallic",
+      "Compressor 4:1",
+      "Delay 1/16 Mix 6"
+    ],
+    "macros": [
+      "Drive → Dist",
+      "Width → Delay",
+      "Dark → Cutoff",
+      "Index → Warp Amt"
+    ],
+    "matrix": [
+      "LFO 1 → OSC A Warp",
+      "Env 2 → Filter"
+    ],
+    "notes": "OSC B is FM source — keep its level at 0 and route via warp."
+  }
+}
