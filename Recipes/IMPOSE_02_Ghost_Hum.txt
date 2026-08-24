@@ -1,0 +1,59 @@
+IMPOSE  02  GHOST HUM
+File        : IMPOSE_02_Ghost_Hum
+Category    : Hum / Organic
+Key         : A     Tempo hint 122 BPM
+Tags        : noise, organic, dark
+
+Thinner oscillator, louder electrical bed. For breakdowns and tension fills.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0.2
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.45    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0.05
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine -8
+  Level     : 0.2    Pan -12
+OSC C
+  Off
+NOISE
+  On    Sample Organics / AC hum1    Level 0.26    LP 380 Hz
+
+FILTER
+  Type MG Low 24    Cutoff 150 Hz    Reso 10
+  Drive 12    Env Amt +18%
+
+ENV 1 (amp)     A 18 ms   D 320 ms   S 0.8   R 320 ms
+ENV 2 (filter)  A 8 ms   D 500 ms   S 0.2   R 220 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest Noise Level    Amt 12%
+
+FX RACK
+  1. EQ — HP 32 Hz
+  2. Chorus — Mix 16
+  3. Compressor — 3:1 slow
+  4. Delay — 1/4, Mix 10
+
+MACROS
+  1 Drive → Dist
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Hum → Noise
+
+MOD MATRIX
+  • LFO 1 → Noise Level
+  • Env 2 → Filter
+
+NOTES
+  Ride Macro 4. Keep OSC A quiet so the hum is the character.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_02_Ghost_Hum.SerumPreset
