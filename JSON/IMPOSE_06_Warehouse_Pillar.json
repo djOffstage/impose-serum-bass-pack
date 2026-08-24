@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "warehouse-pillar",
+  "n": 6,
+  "name": "Warehouse Pillar",
+  "slug": "IMPOSE_06_Warehouse_Pillar",
+  "category": "sub",
+  "tags": [
+    "huge",
+    "mono",
+    "peak time"
+  ],
+  "key": "F",
+  "bpm": 128,
+  "description": "A column of sub. Slight clip, almost no mid. Drop this under a perc loop.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.85
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.08,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.14
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -2,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.4
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 12",
+      "cutoff": "130 Hz",
+      "reso": 6,
+      "drive": 18,
+      "envAmt": "+10%"
+    },
+    "env1": {
+      "a": "4 ms",
+      "d": "140 ms",
+      "s": 0.92,
+      "r": "120 ms"
+    },
+    "env2": {
+      "a": "2 ms",
+      "d": "180 ms",
+      "s": 0.4,
+      "r": "80 ms"
+    },
+    "lfo1": {
+      "rate": "Off",
+      "shape": "Sine",
+      "dest": "—",
+      "amount": "0"
+    },
+    "fx": [
+      "Distortion — Soft clip, Drive 22, Mix 30",
+      "Compressor — 5:1",
+      "Utility — Force mono"
+    ],
+    "macros": [
+      "Drive → Clip",
+      "Width → (leave at 0)",
+      "Dark → Cutoff",
+      "Sub → OSC C"
+    ],
+    "matrix": [
+      "Vel → Amp slightly"
+    ],
+    "notes": "OSC C is the true sub. Do not unison it."
+  }
+}
