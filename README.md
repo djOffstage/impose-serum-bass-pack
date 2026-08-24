@@ -1,27 +1,24 @@
 # IMPOSE — Serum 2 Bass Pack
 
-24 analog / tech-house / reese / acid / 808 / growl bass patches.
+24 analog / tech-house / reese / acid / 808 / growl bass patches as **real Serum 1 `.fxp` files**.
 
-Inspired by the attached Serum 1 preset `AU_MT_bass_memories_imposing` (Organics / AC hum1).
+Cloned from the attached Serum 1 preset `AU_MT_bass_memories_imposing` (Organics / AC hum1). Oscillator, filter, envelope, LFO and FX knobs are morphed per patch. Wavetable + hum sample stay from the original so Serum will load them.
+
+Serum 2 opens Serum 1 `.fxp` on drag-and-drop.
 
 ## Download
 
-- **[IMPOSE_Serum2_Bass_Pack.zip](https://github.com/djOffstage/impose-serum-bass-pack/raw/main/IMPOSE_Serum2_Bass_Pack.zip)** — recipes + original `.fxp`
-- **[Original .fxp](https://github.com/djOffstage/impose-serum-bass-pack/raw/main/Original/AU_MTF_bass_synth_memories_imposing.fxp)** — drag onto Serum 2
-- **[All 24 sheets (one file)](https://github.com/djOffstage/impose-serum-bass-pack/blob/main/IMPOSE_Serum2_Bass_Pack.txt)** — copy/rebuild
+- **[IMPOSE_Serum2_Bass_Pack.zip](https://github.com/djOffstage/impose-serum-bass-pack/raw/main/IMPOSE_Serum2_Bass_Pack.zip)**
+- **[24 .fxp files](https://github.com/djOffstage/impose-serum-bass-pack/tree/main/FXP)**
+- **[Original reference .fxp](https://github.com/djOffstage/impose-serum-bass-pack/raw/main/Original/AU_MTF_bass_synth_memories_imposing.fxp)**
 
-## Install in Serum 2
+## Install
 
-1. Drag the `.fxp` onto Serum 2 (legacy Serum 1 presets convert on load).
-2. Rebuild the 24 IMPOSE patches from `/Recipes/` (~2 min each). Factory wavetables only.
-3. Save as `.SerumPreset` into `Documents/Xfer/Serum 2 Presets/User/IMPOSE/` then **Rescan folders on disk**.
+1. Drag any `FXP/*.fxp` onto Serum 2.
+2. Or copy into `Documents/Xfer/Serum 2 Presets/User/IMPOSE/` and **Rescan folders on disk**.
 
-Native `.SerumPreset` binaries are not included — Serum 2's format is compressed CBOR and files written outside Serum will crash the plugin.
+## How the .fxp files were made
 
-## Pack contents
+Serum 1 `.fxp` = VST2 header (`CcnK` / `FPCh` / `XfsX`) + zlib chunk. ~300 little-endian floats at offset `0x3460` follow Xfer `SYParameters.txt` order. Each IMPOSE patch starts from the decompressed original, writes those floats, updates the name, recompresses.
 
-| Path | What |
-|---|---|
-| `/Original/` | Reference `.fxp` |
-| `/Recipes/` | One text sheet per patch |
-| `/JSON/` | Machine-readable recipes |
+Unsigned `.SerumPreset` (Serum 2 CBOR) files are not generated — those crash when invented from scratch.
