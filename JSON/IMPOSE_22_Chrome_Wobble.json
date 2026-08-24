@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "chrome-wobble",
+  "n": 22,
+  "name": "Chrome Wobble",
+  "slug": "IMPOSE_22_Chrome_Wobble",
+  "category": "wobble",
+  "tags": [
+    "lfo",
+    "1/4",
+    "dub"
+  ],
+  "key": "A#",
+  "bpm": 140,
+  "description": "Quarter-note filter wobble, metallic saw. Hold a note and ride Dark.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 5,
+      "detune": 14,
+      "blend": 50,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Dirty Saw",
+      "level": 0.6
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.3,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.2
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -2,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.3
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "460 Hz",
+      "reso": 28,
+      "drive": 18,
+      "envAmt": "+8%"
+    },
+    "env1": {
+      "a": "6 ms",
+      "d": "200 ms",
+      "s": 0.86,
+      "r": "160 ms"
+    },
+    "env2": {
+      "a": "4 ms",
+      "d": "180 ms",
+      "s": 0.4,
+      "r": "120 ms"
+    },
+    "lfo1": {
+      "rate": "1/4",
+      "shape": "Triangle",
+      "dest": "Filter Cutoff",
+      "amount": "55%"
+    },
+    "fx": [
+      "Distortion Tube 28 / 40",
+      "Chorus Mix 10",
+      "Compressor 4:1"
+    ],
+    "macros": [
+      "Drive → Tube",
+      "Width → Unison",
+      "Dark → Cutoff offset",
+      "Rate → LFO rate (1/4–1/16)"
+    ],
+    "matrix": [
+      "LFO 1 → Filter Cutoff (bipolar)"
+    ],
+    "notes": "Lock LFO to host. Change rate to 1/8 for half-time drops."
+  }
+}
