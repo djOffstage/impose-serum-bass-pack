@@ -1,0 +1,58 @@
+IMPOSE  15  HEATWAVE
+File        : IMPOSE_15_Heatwave
+Category    : Acid / 303
+Key         : G     Tempo hint 130 BPM
+Tags        : hot, reso, peak
+
+Resonance pushed into self-oscillation territory. Handle with a high-cut.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0.34
+  Warp      : PWM  0.22
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.64    Pan 0
+OSC B
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0.2    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type Acid    Cutoff 500 Hz    Reso 78
+  Drive 36    Env Amt +70%
+
+ENV 1 (amp)     A 1 ms   D 100 ms   S 0.68   R 70 ms
+ENV 2 (filter)  A 0.5 ms   D 140 ms   S 0.05   R 50 ms
+
+LFO 1
+  Rate 1/8    Shape Triangle
+  Dest Reso    Amt 8%
+
+FX RACK
+  1. Distortion Fold 40 / 52
+  2. EQ — HP 80, LP 6k (protect tweeters)
+  3. Compressor 5:1
+
+MACROS
+  1 Drive → Fold
+  2 Width → OSC B
+  3 Dark → Cutoff
+  4 Squelch → Reso
+
+MOD MATRIX
+  • Env 2 → Filter (main)
+  • LFO 1 → Reso
+
+NOTES
+  Put a safety LP at 6 kHz on the channel. This one screams.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_15_Heatwave.SerumPreset
