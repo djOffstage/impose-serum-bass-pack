@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "dirt-organ",
+  "n": 20,
+  "name": "Dirt Organ",
+  "slug": "IMPOSE_20_Dirt_Organ",
+  "category": "distort",
+  "tags": [
+    "organ",
+    "harmonic",
+    "growl"
+  ],
+  "key": "A",
+  "bpm": 118,
+  "description": "Drawbar-ish harmonic stack into mild foldback. Church-basement bass.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.5
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.28
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 10,
+      "wavetable": "I Saw The Sine",
+      "level": 0.12
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MS2 Low 24",
+      "cutoff": "520 Hz",
+      "reso": 16,
+      "drive": 14,
+      "envAmt": "+18%"
+    },
+    "env1": {
+      "a": "12 ms",
+      "d": "260 ms",
+      "s": 0.82,
+      "r": "220 ms"
+    },
+    "env2": {
+      "a": "6 ms",
+      "d": "300 ms",
+      "s": 0.28,
+      "r": "160 ms"
+    },
+    "lfo1": {
+      "rate": "1/2",
+      "shape": "Sine",
+      "dest": "OSC C level",
+      "amount": "10%"
+    },
+    "fx": [
+      "Distortion Fold 34 / 48",
+      "Chorus Mix 14",
+      "EQ 700 +1 (body)",
+      "Reverb Room 5%"
+    ],
+    "macros": [
+      "Drive → Fold",
+      "Width → Chorus",
+      "Dark → Cutoff",
+      "Pipe → OSC C"
+    ],
+    "matrix": [
+      "LFO 1 → OSC C Level"
+    ],
+    "notes": "OSC A/B/C are 8', 4', 2' drawbars. Blend, don't unison."
+  }
+}
