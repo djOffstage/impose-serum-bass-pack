@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "velvet-floor",
+  "n": 7,
+  "name": "Velvet Floor",
+  "slug": "IMPOSE_07_Velvet_Floor",
+  "category": "sub",
+  "tags": [
+    "soft",
+    "tape",
+    "deep house"
+  ],
+  "key": "A",
+  "bpm": 120,
+  "description": "Saturated sine that kisses the speakers instead of punching them.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.72
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.1,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 3,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.22
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MS2 Low 24",
+      "cutoff": "250 Hz",
+      "reso": 10,
+      "drive": 10,
+      "envAmt": "+14%"
+    },
+    "env1": {
+      "a": "16 ms",
+      "d": "300 ms",
+      "s": 0.84,
+      "r": "280 ms"
+    },
+    "env2": {
+      "a": "8 ms",
+      "d": "340 ms",
+      "s": 0.3,
+      "r": "180 ms"
+    },
+    "lfo1": {
+      "rate": "1/1",
+      "shape": "Sine",
+      "dest": "Filter Cutoff",
+      "amount": "5%"
+    },
+    "fx": [
+      "Distortion — Tape, Drive 28, Mix 38",
+      "Chorus — Mix 12",
+      "EQ — air dip 3k −1"
+    ],
+    "macros": [
+      "Drive → Tape",
+      "Width → Chorus",
+      "Dark → Cutoff",
+      "Air → EQ 3k"
+    ],
+    "matrix": [
+      "LFO 1 → Filter"
+    ],
+    "notes": "Longer attack. Sits under pads without fighting them."
+  }
+}
