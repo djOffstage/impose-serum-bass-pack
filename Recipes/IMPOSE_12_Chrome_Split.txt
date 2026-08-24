@@ -1,0 +1,63 @@
+IMPOSE  12  CHROME SPLIT
+File        : IMPOSE_12_Chrome_Split
+Category    : Reese / Neuro
+Key         : G     Tempo hint 128 BPM
+Tags        : wide, stereo, peak
+
+Hard-panned dual saws. Huge on headphones, still has a mono sub.
+
+OSC A
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 7    Detune 22    Blend 70
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.55    Pan 0
+OSC B
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 11
+  Level     : 0.22    Pan -30
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.36    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 560 Hz    Reso 14
+  Drive 12    Env Amt +18%
+
+ENV 1 (amp)     A 7 ms   D 220 ms   S 0.85   R 180 ms
+ENV 2 (filter)  A 4 ms   D 280 ms   S 0.28   R 140 ms
+
+LFO 1
+  Rate 1/4    Shape Triangle
+  Dest OSC B Pan    Amt 20%
+
+FX RACK
+  1. Hyper / Dimension Mix 22
+  2. Chorus Mix 16
+  3. Compressor 3:1
+  4. Utility mono < 120 Hz
+
+MACROS
+  1 Drive → Sat
+  2 Width → Hyper + Unison
+  3 Dark → Cutoff
+  4 Spread → OSC B pan
+
+MOD MATRIX
+  • LFO 1 → OSC B Pan
+
+NOTES
+  Check in mono — the sub must survive.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_12_Chrome_Split.SerumPreset
