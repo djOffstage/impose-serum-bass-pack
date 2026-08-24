@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "silk-distortion",
+  "n": 23,
+  "name": "Silk Distortion",
+  "slug": "IMPOSE_23_Silk_Distortion",
+  "category": "wobble",
+  "tags": [
+    "slow",
+    "lfo",
+    "warm"
+  ],
+  "key": "F",
+  "bpm": 120,
+  "description": "Slow sine on the filter, gentle tape. Hypnotic rather than wobbly.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 3,
+      "detune": 8,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.56
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.26
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MS2 Low 24",
+      "cutoff": "340 Hz",
+      "reso": 18,
+      "drive": 12,
+      "envAmt": "+10%"
+    },
+    "env1": {
+      "a": "22 ms",
+      "d": "320 ms",
+      "s": 0.86,
+      "r": "300 ms"
+    },
+    "env2": {
+      "a": "12 ms",
+      "d": "400 ms",
+      "s": 0.4,
+      "r": "220 ms"
+    },
+    "lfo1": {
+      "rate": "1/1",
+      "shape": "Sine",
+      "dest": "Filter Cutoff",
+      "amount": "40%"
+    },
+    "fx": [
+      "Distortion Tape 26 / 36",
+      "Chorus Mix 16",
+      "Delay 1/4 Mix 10",
+      "Reverb 6%"
+    ],
+    "macros": [
+      "Drive → Tape",
+      "Width → Chorus",
+      "Dark → Cutoff",
+      "Swim → LFO amt"
+    ],
+    "matrix": [
+      "LFO 1 → Filter"
+    ],
+    "notes": "One-bar LFO. Works as a pad-bass under chords."
+  }
+}
