@@ -1,0 +1,2667 @@
+[
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "memories-imposing",
+    "n": 1,
+    "name": "Memories Imposing",
+    "slug": "IMPOSE_01_Memories_Imposing",
+    "category": "hum",
+    "tags": [
+      "analog",
+      "hum",
+      "tech house",
+      "reference"
+    ],
+    "key": "C",
+    "bpm": 126,
+    "description": "Recreation of the attached AU_MTF patch: analog saw/square spine, AC-hum noise bed, slow imposing filter. The hum stays at 60 Hz while the bass tracks pitch.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.12,
+        "warp": "Sync",
+        "warpAmt": 0.12,
+        "unison": 3,
+        "detune": 8,
+        "blend": 35,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.7
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.28,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 2,
+        "detune": 4,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 6,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.3
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": true,
+        "sample": "Organics / AC hum1",
+        "level": 0.14,
+        "lp": "420 Hz"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "190 Hz",
+        "reso": 18,
+        "drive": 22,
+        "envAmt": "+38%"
+      },
+      "env1": {
+        "a": "10 ms",
+        "d": "280 ms",
+        "s": 0.86,
+        "r": "240 ms"
+      },
+      "env2": {
+        "a": "4 ms",
+        "d": "420 ms",
+        "s": 0.28,
+        "r": "180 ms"
+      },
+      "lfo1": {
+        "rate": "1/1",
+        "shape": "Sine",
+        "dest": "Filter Cutoff",
+        "amount": "8%"
+      },
+      "fx": [
+        "Distortion — Tube, Drive 32, Mix 40",
+        "EQ — Low shelf +2.5 dB @ 75 Hz, dip −1.5 dB @ 280 Hz",
+        "Compressor — 4:1, Attack 28 ms, Makeup +3",
+        "Hyper / Dimension — Mix 10",
+        "Delay — 1/8 dotted, Mix 8, HP 220 Hz"
+      ],
+      "macros": [
+        "Drive → Dist Drive + Filter Drive",
+        "Width → Unison Detune + Hyper Mix",
+        "Dark → Filter Cutoff (invert)",
+        "Hum → Noise Level"
+      ],
+      "matrix": [
+        "Env 2 → Filter Cutoff",
+        "LFO 1 → Filter Cutoff (aux)",
+        "Vel → Amp"
+      ],
+      "notes": "Leave the AC hum un-keyed so it sits at 60 Hz. High-pass the noise around 40 Hz so it does not fight the sub. Play C1–C2, mono, slight glide."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "ghost-hum",
+    "n": 2,
+    "name": "Ghost Hum",
+    "slug": "IMPOSE_02_Ghost_Hum",
+    "category": "hum",
+    "tags": [
+      "noise",
+      "organic",
+      "dark"
+    ],
+    "key": "A",
+    "bpm": 122,
+    "description": "Thinner oscillator, louder electrical bed. For breakdowns and tension fills.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.2,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.45
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.05,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": -8,
+        "pan": -12,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.2
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": true,
+        "sample": "Organics / AC hum1",
+        "level": 0.26,
+        "lp": "380 Hz"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "150 Hz",
+        "reso": 10,
+        "drive": 12,
+        "envAmt": "+18%"
+      },
+      "env1": {
+        "a": "18 ms",
+        "d": "320 ms",
+        "s": 0.8,
+        "r": "320 ms"
+      },
+      "env2": {
+        "a": "8 ms",
+        "d": "500 ms",
+        "s": 0.2,
+        "r": "220 ms"
+      },
+      "lfo1": {
+        "rate": "1/2",
+        "shape": "Sine",
+        "dest": "Noise Level",
+        "amount": "12%"
+      },
+      "fx": [
+        "EQ — HP 32 Hz",
+        "Chorus — Mix 16",
+        "Compressor — 3:1 slow",
+        "Delay — 1/4, Mix 10"
+      ],
+      "macros": [
+        "Drive → Dist",
+        "Width → Chorus",
+        "Dark → Cutoff",
+        "Hum → Noise"
+      ],
+      "matrix": [
+        "LFO 1 → Noise Level",
+        "Env 2 → Filter"
+      ],
+      "notes": "Ride Macro 4. Keep OSC A quiet so the hum is the character."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "grid-voltage",
+    "n": 3,
+    "name": "Grid Voltage",
+    "slug": "IMPOSE_03_Grid_Voltage",
+    "category": "hum",
+    "tags": [
+      "industrial",
+      "60Hz",
+      "mono"
+    ],
+    "key": "F",
+    "bpm": 128,
+    "description": "60 Hz harmonic stack beating against a slightly sharp saw. Warehouse tension.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.08,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 2,
+        "detune": 5,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Dirty Saw",
+        "level": 0.62
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 3,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.22
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": true,
+        "sample": "Organics / AC hum1",
+        "level": 0.2,
+        "lp": "500 Hz"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "230 Hz",
+        "reso": 22,
+        "drive": 28,
+        "envAmt": "+24%"
+      },
+      "env1": {
+        "a": "6 ms",
+        "d": "180 ms",
+        "s": 0.88,
+        "r": "160 ms"
+      },
+      "env2": {
+        "a": "2 ms",
+        "d": "260 ms",
+        "s": 0.3,
+        "r": "120 ms"
+      },
+      "lfo1": {
+        "rate": "1/8",
+        "shape": "Sine",
+        "dest": "OSC B Fine",
+        "amount": "4 cents"
+      },
+      "fx": [
+        "Distortion — Diode, Drive 40, Mix 48",
+        "EQ — 60 Hz +1.5, 120 Hz +1",
+        "Compressor — 6:1"
+      ],
+      "macros": [
+        "Drive → Dist",
+        "Width → Unison",
+        "Dark → Cutoff",
+        "Hum → Noise"
+      ],
+      "matrix": [
+        "LFO 1 → OSC B Fine"
+      ],
+      "notes": "Keep it mono. The beating is the point."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "afterhours",
+    "n": 4,
+    "name": "Afterhours",
+    "slug": "IMPOSE_04_Afterhours",
+    "category": "hum",
+    "tags": [
+      "warm",
+      "late night",
+      "chorus"
+    ],
+    "key": "G",
+    "bpm": 118,
+    "description": "Dusty round bass, slow chorus, tape-like saturation. 2am closer.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.35,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 2,
+        "detune": 6,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.58
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": -5,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.24
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": true,
+        "sample": "Organics / AC hum1",
+        "level": 0.08,
+        "lp": "300 Hz"
+      },
+      "filter": {
+        "type": "MS2 Low 24",
+        "cutoff": "270 Hz",
+        "reso": 12,
+        "drive": 14,
+        "envAmt": "+20%"
+      },
+      "env1": {
+        "a": "22 ms",
+        "d": "360 ms",
+        "s": 0.8,
+        "r": "360 ms"
+      },
+      "env2": {
+        "a": "10 ms",
+        "d": "480 ms",
+        "s": 0.25,
+        "r": "240 ms"
+      },
+      "lfo1": {
+        "rate": "1/2",
+        "shape": "Sine",
+        "dest": "Chorus Mix",
+        "amount": "6%"
+      },
+      "fx": [
+        "Distortion — Tape, Drive 24, Mix 30",
+        "Chorus — Mix 22",
+        "Delay — 1/4, Mix 10",
+        "Reverb — Room 6%"
+      ],
+      "macros": [
+        "Drive → Tape",
+        "Width → Chorus",
+        "Dark → Cutoff",
+        "Hum → Noise"
+      ],
+      "matrix": [
+        "Env 2 → Filter"
+      ],
+      "notes": "Longer release. Let it bloom into the next chord."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "night-bus",
+    "n": 5,
+    "name": "Night Bus",
+    "slug": "IMPOSE_05_Night_Bus",
+    "category": "sub",
+    "tags": [
+      "tech house",
+      "round",
+      "126"
+    ],
+    "key": "C",
+    "bpm": 126,
+    "description": "Clean round tech-house sub. Sine + barely-there saw. Translates on a club system.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.78
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 2,
+        "detune": 3,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.18
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "170 Hz",
+        "reso": 8,
+        "drive": 8,
+        "envAmt": "+16%"
+      },
+      "env1": {
+        "a": "6 ms",
+        "d": "180 ms",
+        "s": 0.9,
+        "r": "140 ms"
+      },
+      "env2": {
+        "a": "3 ms",
+        "d": "220 ms",
+        "s": 0.35,
+        "r": "100 ms"
+      },
+      "lfo1": {
+        "rate": "Off",
+        "shape": "Sine",
+        "dest": "—",
+        "amount": "0"
+      },
+      "fx": [
+        "EQ — Low shelf +1.5 @ 60, HP 28 Hz",
+        "Compressor — 3:1, slow",
+        "Utility — Mono below 140 Hz"
+      ],
+      "macros": [
+        "Drive → Soft clip",
+        "Width → OSC B level",
+        "Dark → Cutoff",
+        "Click → Env2 amt"
+      ],
+      "matrix": [
+        "Env 2 → Filter Cutoff"
+      ],
+      "notes": "The saw is only there so the sub reads on small speakers. Keep it mono under 140 Hz."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "warehouse-pillar",
+    "n": 6,
+    "name": "Warehouse Pillar",
+    "slug": "IMPOSE_06_Warehouse_Pillar",
+    "category": "sub",
+    "tags": [
+      "huge",
+      "mono",
+      "peak time"
+    ],
+    "key": "F",
+    "bpm": 128,
+    "description": "A column of sub. Slight clip, almost no mid. Drop this under a perc loop.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.85
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.08,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.14
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -2,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.4
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 12",
+        "cutoff": "130 Hz",
+        "reso": 6,
+        "drive": 18,
+        "envAmt": "+10%"
+      },
+      "env1": {
+        "a": "4 ms",
+        "d": "140 ms",
+        "s": 0.92,
+        "r": "120 ms"
+      },
+      "env2": {
+        "a": "2 ms",
+        "d": "180 ms",
+        "s": 0.4,
+        "r": "80 ms"
+      },
+      "lfo1": {
+        "rate": "Off",
+        "shape": "Sine",
+        "dest": "—",
+        "amount": "0"
+      },
+      "fx": [
+        "Distortion — Soft clip, Drive 22, Mix 30",
+        "Compressor — 5:1",
+        "Utility — Force mono"
+      ],
+      "macros": [
+        "Drive → Clip",
+        "Width → (leave at 0)",
+        "Dark → Cutoff",
+        "Sub → OSC C"
+      ],
+      "matrix": [
+        "Vel → Amp slightly"
+      ],
+      "notes": "OSC C is the true sub. Do not unison it."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "velvet-floor",
+    "n": 7,
+    "name": "Velvet Floor",
+    "slug": "IMPOSE_07_Velvet_Floor",
+    "category": "sub",
+    "tags": [
+      "soft",
+      "tape",
+      "deep house"
+    ],
+    "key": "A",
+    "bpm": 120,
+    "description": "Saturated sine that kisses the speakers instead of punching them.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.72
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.1,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 3,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.22
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MS2 Low 24",
+        "cutoff": "250 Hz",
+        "reso": 10,
+        "drive": 10,
+        "envAmt": "+14%"
+      },
+      "env1": {
+        "a": "16 ms",
+        "d": "300 ms",
+        "s": 0.84,
+        "r": "280 ms"
+      },
+      "env2": {
+        "a": "8 ms",
+        "d": "340 ms",
+        "s": 0.3,
+        "r": "180 ms"
+      },
+      "lfo1": {
+        "rate": "1/1",
+        "shape": "Sine",
+        "dest": "Filter Cutoff",
+        "amount": "5%"
+      },
+      "fx": [
+        "Distortion — Tape, Drive 28, Mix 38",
+        "Chorus — Mix 12",
+        "EQ — air dip 3k −1"
+      ],
+      "macros": [
+        "Drive → Tape",
+        "Width → Chorus",
+        "Dark → Cutoff",
+        "Air → EQ 3k"
+      ],
+      "matrix": [
+        "LFO 1 → Filter"
+      ],
+      "notes": "Longer attack. Sits under pads without fighting them."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "last-call",
+    "n": 8,
+    "name": "Last Call",
+    "slug": "IMPOSE_08_Last_Call",
+    "category": "sub",
+    "tags": [
+      "dusty",
+      "delay",
+      "closer"
+    ],
+    "key": "D",
+    "bpm": 116,
+    "description": "Tired round bass with a dotted delay ghost. Last-song material.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.66
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": -12,
+        "pan": 18,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.18
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "210 Hz",
+        "reso": 12,
+        "drive": 8,
+        "envAmt": "+12%"
+      },
+      "env1": {
+        "a": "24 ms",
+        "d": "400 ms",
+        "s": 0.76,
+        "r": "420 ms"
+      },
+      "env2": {
+        "a": "12 ms",
+        "d": "480 ms",
+        "s": 0.22,
+        "r": "260 ms"
+      },
+      "lfo1": {
+        "rate": "1/2",
+        "shape": "Sine",
+        "dest": "Delay Mix",
+        "amount": "6%"
+      },
+      "fx": [
+        "Delay — 1/8 dotted, Mix 16, Feedback 32, HP 200",
+        "Chorus — Mix 12",
+        "Tape sat 18"
+      ],
+      "macros": [
+        "Drive → Sat",
+        "Width → OSC B pan",
+        "Dark → Cutoff",
+        "Space → Delay mix"
+      ],
+      "matrix": [
+        "LFO 1 → Delay Mix"
+      ],
+      "notes": "Mute delay on the last bar of a phrase."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "velvet-reese",
+    "n": 9,
+    "name": "Velvet Reese",
+    "slug": "IMPOSE_09_Velvet_Reese",
+    "category": "reese",
+    "tags": [
+      "detune",
+      "neuro",
+      "wide"
+    ],
+    "key": "A#",
+    "bpm": 132,
+    "description": "Classic two-saw reese, not screamy. Works in house and DnB at different octaves.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 5,
+        "detune": 18,
+        "blend": 55,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.62
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": -14,
+        "pan": 8,
+        "wavetable": "Dirty Saw",
+        "level": 0.3
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -2,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.28
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "480 Hz",
+        "reso": 16,
+        "drive": 16,
+        "envAmt": "+22%"
+      },
+      "env1": {
+        "a": "8 ms",
+        "d": "240 ms",
+        "s": 0.84,
+        "r": "200 ms"
+      },
+      "env2": {
+        "a": "4 ms",
+        "d": "320 ms",
+        "s": 0.3,
+        "r": "160 ms"
+      },
+      "lfo1": {
+        "rate": "1/4",
+        "shape": "Sine",
+        "dest": "Unison Detune",
+        "amount": "6%"
+      },
+      "fx": [
+        "Distortion — Tube 30 / 40",
+        "Chorus — Mix 14",
+        "EQ — 200 Hz dip −1.5",
+        "Compressor 4:1"
+      ],
+      "macros": [
+        "Drive → Tube",
+        "Width → Unison detune",
+        "Dark → Cutoff",
+        "Grit → OSC B"
+      ],
+      "matrix": [
+        "LFO 1 → Unison Detune",
+        "Env 2 → Filter"
+      ],
+      "notes": "Drop an octave for 174 DnB. Keep OSC C mono."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "mono-nerve",
+    "n": 10,
+    "name": "Mono Nerve",
+    "slug": "IMPOSE_10_Mono_Nerve",
+    "category": "reese",
+    "tags": [
+      "tight",
+      "mid",
+      "mono"
+    ],
+    "key": "C",
+    "bpm": 134,
+    "description": "Reese folded into mono. Aggressive mid, no stereo smear.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 3,
+        "detune": 9,
+        "blend": 30,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Dirty Saw",
+        "level": 0.66
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.32,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 9,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.3
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "620 Hz",
+        "reso": 22,
+        "drive": 24,
+        "envAmt": "+30%"
+      },
+      "env1": {
+        "a": "4 ms",
+        "d": "160 ms",
+        "s": 0.86,
+        "r": "120 ms"
+      },
+      "env2": {
+        "a": "2 ms",
+        "d": "220 ms",
+        "s": 0.25,
+        "r": "100 ms"
+      },
+      "lfo1": {
+        "rate": "Off",
+        "shape": "Sine",
+        "dest": "—",
+        "amount": "0"
+      },
+      "fx": [
+        "Distortion — Diode 38 / 50",
+        "EQ — 700 Hz +1, 3k −2",
+        "Compressor 6:1",
+        "Utility — Mono"
+      ],
+      "macros": [
+        "Drive → Diode",
+        "Width → Unison (keep low)",
+        "Dark → Cutoff",
+        "Mid → EQ 700"
+      ],
+      "matrix": [
+        "Env 2 → Filter"
+      ],
+      "notes": "Designed to sit under a vocal without stereo fight."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "frozen-fm",
+    "n": 11,
+    "name": "Frozen FM",
+    "slug": "IMPOSE_11_Frozen_FM",
+    "category": "reese",
+    "tags": [
+      "fm",
+      "metallic",
+      "cold"
+    ],
+    "key": "E",
+    "bpm": 140,
+    "description": "Bell-adjacent FM bass. Icy, useful as a mid-bass over a sine sub.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "FM (from B)",
+        "warpAmt": 0.42,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.64
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -2,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.34
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "700 Hz",
+        "reso": 18,
+        "drive": 10,
+        "envAmt": "+34%"
+      },
+      "env1": {
+        "a": "3 ms",
+        "d": "180 ms",
+        "s": 0.7,
+        "r": "160 ms"
+      },
+      "env2": {
+        "a": "1 ms",
+        "d": "220 ms",
+        "s": 0.18,
+        "r": "120 ms"
+      },
+      "lfo1": {
+        "rate": "1/8",
+        "shape": "Sine",
+        "dest": "Warp Amt",
+        "amount": "8%"
+      },
+      "fx": [
+        "EQ — 1.2k +1.5 metallic",
+        "Compressor 4:1",
+        "Delay 1/16 Mix 6"
+      ],
+      "macros": [
+        "Drive → Dist",
+        "Width → Delay",
+        "Dark → Cutoff",
+        "Index → Warp Amt"
+      ],
+      "matrix": [
+        "LFO 1 → OSC A Warp",
+        "Env 2 → Filter"
+      ],
+      "notes": "OSC B is FM source — keep its level at 0 and route via warp."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "chrome-split",
+    "n": 12,
+    "name": "Chrome Split",
+    "slug": "IMPOSE_12_Chrome_Split",
+    "category": "reese",
+    "tags": [
+      "wide",
+      "stereo",
+      "peak"
+    ],
+    "key": "G",
+    "bpm": 128,
+    "description": "Hard-panned dual saws. Huge on headphones, still has a mono sub.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 7,
+        "detune": 22,
+        "blend": 70,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.55
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 11,
+        "pan": -30,
+        "wavetable": "Dirty Saw",
+        "level": 0.22
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -2,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.36
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "560 Hz",
+        "reso": 14,
+        "drive": 12,
+        "envAmt": "+18%"
+      },
+      "env1": {
+        "a": "7 ms",
+        "d": "220 ms",
+        "s": 0.85,
+        "r": "180 ms"
+      },
+      "env2": {
+        "a": "4 ms",
+        "d": "280 ms",
+        "s": 0.28,
+        "r": "140 ms"
+      },
+      "lfo1": {
+        "rate": "1/4",
+        "shape": "Triangle",
+        "dest": "OSC B Pan",
+        "amount": "20%"
+      },
+      "fx": [
+        "Hyper / Dimension Mix 22",
+        "Chorus Mix 16",
+        "Compressor 3:1",
+        "Utility mono < 120 Hz"
+      ],
+      "macros": [
+        "Drive → Sat",
+        "Width → Hyper + Unison",
+        "Dark → Cutoff",
+        "Spread → OSC B pan"
+      ],
+      "matrix": [
+        "LFO 1 → OSC B Pan"
+      ],
+      "notes": "Check in mono — the sub must survive."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "acid-memory",
+    "n": 13,
+    "name": "Acid Memory",
+    "slug": "IMPOSE_13_Acid_Memory",
+    "category": "acid",
+    "tags": [
+      "303",
+      "resonance",
+      "house"
+    ],
+    "key": "C",
+    "bpm": 126,
+    "description": "303-style square with a hungry filter envelope. Classic acid, not cartoon.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.32,
+        "warp": "PWM",
+        "warpAmt": 0.18,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.78
+      },
+      "oscB": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "Acid / MG Low 24",
+        "cutoff": "360 Hz",
+        "reso": 62,
+        "drive": 28,
+        "envAmt": "+78%"
+      },
+      "env1": {
+        "a": "2 ms",
+        "d": "120 ms",
+        "s": 0.7,
+        "r": "80 ms"
+      },
+      "env2": {
+        "a": "1 ms",
+        "d": "180 ms",
+        "s": 0.08,
+        "r": "60 ms"
+      },
+      "lfo1": {
+        "rate": "Off",
+        "shape": "Sine",
+        "dest": "—",
+        "amount": "0"
+      },
+      "fx": [
+        "Distortion — Acid / Diode 34 / 45",
+        "EQ — 300 Hz dip if it honks",
+        "Delay 1/8 dotted Mix 8"
+      ],
+      "macros": [
+        "Drive → Dist + Filter Drive",
+        "Width → Delay",
+        "Dark → Cutoff",
+        "Squelch → Reso"
+      ],
+      "matrix": [
+        "Env 2 → Filter Cutoff (main)",
+        "Accent (vel) → Env2 amt"
+      ],
+      "notes": "Program 16th sequences with accent on offbeats. Env 2 is the instrument."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "rolling-square",
+    "n": 14,
+    "name": "Rolling Square",
+    "slug": "IMPOSE_14_Rolling_Square",
+    "category": "acid",
+    "tags": [
+      "house",
+      "16ths",
+      "groove"
+    ],
+    "key": "F",
+    "bpm": 126,
+    "description": "Less resonant than Acid Memory. Rolls under a 126 groove without stealing the hats.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.3,
+        "warp": "PWM",
+        "warpAmt": 0.14,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.7
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.16
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "420 Hz",
+        "reso": 38,
+        "drive": 18,
+        "envAmt": "+55%"
+      },
+      "env1": {
+        "a": "3 ms",
+        "d": "140 ms",
+        "s": 0.74,
+        "r": "100 ms"
+      },
+      "env2": {
+        "a": "2 ms",
+        "d": "220 ms",
+        "s": 0.16,
+        "r": "80 ms"
+      },
+      "lfo1": {
+        "rate": "1/16",
+        "shape": "Saw",
+        "dest": "Filter Cutoff",
+        "amount": "10%"
+      },
+      "fx": [
+        "Distortion Tube 24 / 32",
+        "Delay 1/16 Mix 6",
+        "Compressor 3:1"
+      ],
+      "macros": [
+        "Drive → Tube",
+        "Width → Delay",
+        "Dark → Cutoff",
+        "Roll → LFO amt"
+      ],
+      "matrix": [
+        "LFO 1 → Filter",
+        "Env 2 → Filter"
+      ],
+      "notes": "Sequence in 16ths, leave gaps. The saw just thickens the square."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "heatwave",
+    "n": 15,
+    "name": "Heatwave",
+    "slug": "IMPOSE_15_Heatwave",
+    "category": "acid",
+    "tags": [
+      "hot",
+      "reso",
+      "peak"
+    ],
+    "key": "G",
+    "bpm": 130,
+    "description": "Resonance pushed into self-oscillation territory. Handle with a high-cut.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.34,
+        "warp": "PWM",
+        "warpAmt": 0.22,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.64
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Dirty Saw",
+        "level": 0.2
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "Acid",
+        "cutoff": "500 Hz",
+        "reso": 78,
+        "drive": 36,
+        "envAmt": "+70%"
+      },
+      "env1": {
+        "a": "1 ms",
+        "d": "100 ms",
+        "s": 0.68,
+        "r": "70 ms"
+      },
+      "env2": {
+        "a": "0.5 ms",
+        "d": "140 ms",
+        "s": 0.05,
+        "r": "50 ms"
+      },
+      "lfo1": {
+        "rate": "1/8",
+        "shape": "Triangle",
+        "dest": "Reso",
+        "amount": "8%"
+      },
+      "fx": [
+        "Distortion Fold 40 / 52",
+        "EQ — HP 80, LP 6k (protect tweeters)",
+        "Compressor 5:1"
+      ],
+      "macros": [
+        "Drive → Fold",
+        "Width → OSC B",
+        "Dark → Cutoff",
+        "Squelch → Reso"
+      ],
+      "matrix": [
+        "Env 2 → Filter (main)",
+        "LFO 1 → Reso"
+      ],
+      "notes": "Put a safety LP at 6 kHz on the channel. This one screams."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "concrete-808",
+    "n": 16,
+    "name": "Concrete 808",
+    "slug": "IMPOSE_16_Concrete_808",
+    "category": "eight",
+    "tags": [
+      "808",
+      "punch",
+      "trap-house"
+    ],
+    "key": "C",
+    "bpm": 128,
+    "description": "Sine 808 with a pitch drop. Hard enough for trap, round enough for house.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.92
+      },
+      "oscB": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": true,
+        "sample": "One-shots / Click short",
+        "level": 0.08,
+        "lp": "2.2 kHz"
+      },
+      "filter": {
+        "type": "MG Low 12",
+        "cutoff": "170 Hz",
+        "reso": 6,
+        "drive": 10,
+        "envAmt": "+8%"
+      },
+      "env1": {
+        "a": "0 ms",
+        "d": "420 ms",
+        "s": 0.32,
+        "r": "280 ms"
+      },
+      "env2": {
+        "a": "0 ms",
+        "d": "70 ms",
+        "s": 0,
+        "r": "40 ms"
+      },
+      "lfo1": {
+        "rate": "Off",
+        "shape": "Sine",
+        "dest": "—",
+        "amount": "0"
+      },
+      "fx": [
+        "Distortion Tape 18 / 22",
+        "Compressor 4:1, Attack 8 ms",
+        "EQ 50 Hz +2"
+      ],
+      "macros": [
+        "Drive → Tape",
+        "Punch → Pitch env amt",
+        "Dark → Cutoff",
+        "Click → Noise"
+      ],
+      "matrix": [
+        "Env 2 → OSC A Pitch (+12 to +19 st)",
+        "Env 1 → Amp (exponential)"
+      ],
+      "notes": "Tune per track. Pitch env is Env 2 → pitch, 50–80 ms decay."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "soft-clipper",
+    "n": 17,
+    "name": "Soft Clipper",
+    "slug": "IMPOSE_17_Soft_Clipper",
+    "category": "eight",
+    "tags": [
+      "808",
+      "saturated",
+      "loud"
+    ],
+    "key": "F",
+    "bpm": 130,
+    "description": "Same 808 body, pushed into soft clip so it stays loud on small speakers.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.88
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.08,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.16
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": true,
+        "sample": "One-shots / Click short",
+        "level": 0.06,
+        "lp": "1.8 kHz"
+      },
+      "filter": {
+        "type": "MG Low 12",
+        "cutoff": "210 Hz",
+        "reso": 8,
+        "drive": 16,
+        "envAmt": "+10%"
+      },
+      "env1": {
+        "a": "0 ms",
+        "d": "380 ms",
+        "s": 0.4,
+        "r": "240 ms"
+      },
+      "env2": {
+        "a": "0 ms",
+        "d": "60 ms",
+        "s": 0,
+        "r": "30 ms"
+      },
+      "lfo1": {
+        "rate": "Off",
+        "shape": "Sine",
+        "dest": "—",
+        "amount": "0"
+      },
+      "fx": [
+        "Distortion — Soft clip Drive 44 Mix 62",
+        "Compressor 5:1",
+        "EQ 90 Hz +1.5"
+      ],
+      "macros": [
+        "Drive → Clip",
+        "Punch → Pitch env",
+        "Dark → Cutoff",
+        "Click → Noise"
+      ],
+      "matrix": [
+        "Env 2 → OSC A Pitch"
+      ],
+      "notes": "Gain-stage so the clipper is the loudness, not the channel fader."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "low-voltage",
+    "n": 18,
+    "name": "Low Voltage",
+    "slug": "IMPOSE_18_Low_Voltage",
+    "category": "eight",
+    "tags": [
+      "short",
+      "clicky",
+      "percussive"
+    ],
+    "key": "C",
+    "bpm": 126,
+    "description": "Short 808 / kick-bass hybrid. Use as a pattern bass, not a drone.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.82
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.12,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.18
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": true,
+        "sample": "One-shots / Click short",
+        "level": 0.12,
+        "lp": "3 kHz"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "300 Hz",
+        "reso": 14,
+        "drive": 12,
+        "envAmt": "+40%"
+      },
+      "env1": {
+        "a": "0 ms",
+        "d": "160 ms",
+        "s": 0.08,
+        "r": "90 ms"
+      },
+      "env2": {
+        "a": "0 ms",
+        "d": "50 ms",
+        "s": 0,
+        "r": "30 ms"
+      },
+      "lfo1": {
+        "rate": "Off",
+        "shape": "Sine",
+        "dest": "—",
+        "amount": "0"
+      },
+      "fx": [
+        "Distortion Tube 22 / 30",
+        "Compressor 6:1 fast",
+        "EQ click 3k +1"
+      ],
+      "macros": [
+        "Drive → Tube",
+        "Punch → Pitch env",
+        "Dark → Cutoff",
+        "Click → Noise"
+      ],
+      "matrix": [
+        "Env 2 → Pitch + Filter"
+      ],
+      "notes": "Program like a kick. Leave space on the 2 and 4 if a real kick is in the track."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "pressure-cooker",
+    "n": 19,
+    "name": "Pressure Cooker",
+    "slug": "IMPOSE_19_Pressure_Cooker",
+    "category": "distort",
+    "tags": [
+      "driven",
+      "mid",
+      "aggressive"
+    ],
+    "key": "D",
+    "bpm": 128,
+    "description": "Everything into the tube. Mid-bass that shoves a mix forward.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 3,
+        "detune": 10,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Dirty Saw",
+        "level": 0.62
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.3,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.32
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -2,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.24
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "460 Hz",
+        "reso": 24,
+        "drive": 36,
+        "envAmt": "+40%"
+      },
+      "env1": {
+        "a": "5 ms",
+        "d": "200 ms",
+        "s": 0.84,
+        "r": "160 ms"
+      },
+      "env2": {
+        "a": "2 ms",
+        "d": "240 ms",
+        "s": 0.22,
+        "r": "120 ms"
+      },
+      "lfo1": {
+        "rate": "1/8",
+        "shape": "Sine",
+        "dest": "Drive",
+        "amount": "10%"
+      },
+      "fx": [
+        "Distortion Tube Drive 58 Mix 70",
+        "EQ 250 −2 (mud)",
+        "Compressor 6:1",
+        "Clipper ceiling"
+      ],
+      "macros": [
+        "Drive → Tube",
+        "Width → Unison",
+        "Dark → Cutoff",
+        "Grit → Filter drive"
+      ],
+      "matrix": [
+        "LFO 1 → Dist Drive",
+        "Env 2 → Filter"
+      ],
+      "notes": "Watch the 250 Hz build-up. High-pass anything else in that region."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "dirt-organ",
+    "n": 20,
+    "name": "Dirt Organ",
+    "slug": "IMPOSE_20_Dirt_Organ",
+    "category": "distort",
+    "tags": [
+      "organ",
+      "harmonic",
+      "growl"
+    ],
+    "key": "A",
+    "bpm": 118,
+    "description": "Drawbar-ish harmonic stack into mild foldback. Church-basement bass.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.5
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.28
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 10,
+        "wavetable": "I Saw The Sine",
+        "level": 0.12
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MS2 Low 24",
+        "cutoff": "520 Hz",
+        "reso": 16,
+        "drive": 14,
+        "envAmt": "+18%"
+      },
+      "env1": {
+        "a": "12 ms",
+        "d": "260 ms",
+        "s": 0.82,
+        "r": "220 ms"
+      },
+      "env2": {
+        "a": "6 ms",
+        "d": "300 ms",
+        "s": 0.28,
+        "r": "160 ms"
+      },
+      "lfo1": {
+        "rate": "1/2",
+        "shape": "Sine",
+        "dest": "OSC C level",
+        "amount": "10%"
+      },
+      "fx": [
+        "Distortion Fold 34 / 48",
+        "Chorus Mix 14",
+        "EQ 700 +1 (body)",
+        "Reverb Room 5%"
+      ],
+      "macros": [
+        "Drive → Fold",
+        "Width → Chorus",
+        "Dark → Cutoff",
+        "Pipe → OSC C"
+      ],
+      "matrix": [
+        "LFO 1 → OSC C Level"
+      ],
+      "notes": "OSC A/B/C are 8', 4', 2' drawbars. Blend, don't unison."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "deep-fold",
+    "n": 21,
+    "name": "Deep Fold",
+    "slug": "IMPOSE_21_Deep_Fold",
+    "category": "distort",
+    "tags": [
+      "wavefold",
+      "west coast",
+      "odd"
+    ],
+    "key": "E",
+    "bpm": 122,
+    "description": "West-coast fold on a sine. Harmonics bloom as you lean on Drive.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Bend +/-",
+        "warpAmt": 0.08,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.74
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 5,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.18
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "880 Hz",
+        "reso": 10,
+        "drive": 8,
+        "envAmt": "+18%"
+      },
+      "env1": {
+        "a": "6 ms",
+        "d": "220 ms",
+        "s": 0.84,
+        "r": "180 ms"
+      },
+      "env2": {
+        "a": "4 ms",
+        "d": "260 ms",
+        "s": 0.3,
+        "r": "140 ms"
+      },
+      "lfo1": {
+        "rate": "1/4",
+        "shape": "Sine",
+        "dest": "Fold drive",
+        "amount": "14%"
+      },
+      "fx": [
+        "Distortion Fold Drive 62 Mix 80",
+        "EQ HP 40",
+        "Compressor 3:1",
+        "Delay 1/8 Mix 8"
+      ],
+      "macros": [
+        "Drive → Fold (this is the patch)",
+        "Width → Delay",
+        "Dark → Cutoff",
+        "Shimmer → OSC B"
+      ],
+      "matrix": [
+        "LFO 1 → Dist Drive",
+        "Macro 1 → Warp Amt"
+      ],
+      "notes": "Play with one finger and ride Macro 1. The fold is the melody."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "chrome-wobble",
+    "n": 22,
+    "name": "Chrome Wobble",
+    "slug": "IMPOSE_22_Chrome_Wobble",
+    "category": "wobble",
+    "tags": [
+      "lfo",
+      "1/4",
+      "dub"
+    ],
+    "key": "A#",
+    "bpm": 140,
+    "description": "Quarter-note filter wobble, metallic saw. Hold a note and ride Dark.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 5,
+        "detune": 14,
+        "blend": 50,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Dirty Saw",
+        "level": 0.6
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0.3,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Basic Shapes",
+        "level": 0.2
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -2,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.3
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "460 Hz",
+        "reso": 28,
+        "drive": 18,
+        "envAmt": "+8%"
+      },
+      "env1": {
+        "a": "6 ms",
+        "d": "200 ms",
+        "s": 0.86,
+        "r": "160 ms"
+      },
+      "env2": {
+        "a": "4 ms",
+        "d": "180 ms",
+        "s": 0.4,
+        "r": "120 ms"
+      },
+      "lfo1": {
+        "rate": "1/4",
+        "shape": "Triangle",
+        "dest": "Filter Cutoff",
+        "amount": "55%"
+      },
+      "fx": [
+        "Distortion Tube 28 / 40",
+        "Chorus Mix 10",
+        "Compressor 4:1"
+      ],
+      "macros": [
+        "Drive → Tube",
+        "Width → Unison",
+        "Dark → Cutoff offset",
+        "Rate → LFO rate (1/4–1/16)"
+      ],
+      "matrix": [
+        "LFO 1 → Filter Cutoff (bipolar)"
+      ],
+      "notes": "Lock LFO to host. Change rate to 1/8 for half-time drops."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "silk-distortion",
+    "n": 23,
+    "name": "Silk Distortion",
+    "slug": "IMPOSE_23_Silk_Distortion",
+    "category": "wobble",
+    "tags": [
+      "slow",
+      "lfo",
+      "warm"
+    ],
+    "key": "F",
+    "bpm": 120,
+    "description": "Slow sine on the filter, gentle tape. Hypnotic rather than wobbly.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 3,
+        "detune": 8,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.56
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.26
+      },
+      "oscC": {
+        "on": false,
+        "wavetable": "Basic Shapes",
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": 0,
+        "semi": 0,
+        "fine": 0,
+        "level": 0,
+        "pan": 0
+      },
+      "noise": {
+        "on": false,
+        "sample": "Off",
+        "level": 0,
+        "lp": "—"
+      },
+      "filter": {
+        "type": "MS2 Low 24",
+        "cutoff": "340 Hz",
+        "reso": 18,
+        "drive": 12,
+        "envAmt": "+10%"
+      },
+      "env1": {
+        "a": "22 ms",
+        "d": "320 ms",
+        "s": 0.86,
+        "r": "300 ms"
+      },
+      "env2": {
+        "a": "12 ms",
+        "d": "400 ms",
+        "s": 0.4,
+        "r": "220 ms"
+      },
+      "lfo1": {
+        "rate": "1/1",
+        "shape": "Sine",
+        "dest": "Filter Cutoff",
+        "amount": "40%"
+      },
+      "fx": [
+        "Distortion Tape 26 / 36",
+        "Chorus Mix 16",
+        "Delay 1/4 Mix 10",
+        "Reverb 6%"
+      ],
+      "macros": [
+        "Drive → Tape",
+        "Width → Chorus",
+        "Dark → Cutoff",
+        "Swim → LFO amt"
+      ],
+      "matrix": [
+        "LFO 1 → Filter"
+      ],
+      "notes": "One-bar LFO. Works as a pad-bass under chords."
+    }
+  },
+  {
+    "pack": "IMPOSE",
+    "version": "1.0",
+    "id": "analog-spine",
+    "n": 24,
+    "name": "Analog Spine",
+    "slug": "IMPOSE_24_Analog_Spine",
+    "category": "wobble",
+    "tags": [
+      "pwm",
+      "juno",
+      "moving"
+    ],
+    "key": "C",
+    "bpm": 126,
+    "description": "PWM bass with a slow pulse-width LFO. The backbone of a 126 track.",
+    "serum": {
+      "oscA": {
+        "on": true,
+        "wtPos": 0.22,
+        "warp": "PWM",
+        "warpAmt": 0.35,
+        "unison": 2,
+        "detune": 5,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "PWM",
+        "level": 0.68
+      },
+      "oscB": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -1,
+        "semi": 0,
+        "fine": 4,
+        "pan": 0,
+        "wavetable": "Analog / Juno Saw",
+        "level": 0.2
+      },
+      "oscC": {
+        "on": true,
+        "wtPos": 0,
+        "warp": "Off",
+        "warpAmt": 0,
+        "unison": 1,
+        "detune": 0,
+        "blend": 0,
+        "octave": -2,
+        "semi": 0,
+        "fine": 0,
+        "pan": 0,
+        "wavetable": "I Saw The Sine",
+        "level": 0.32
+      },
+      "noise": {
+        "on": true,
+        "sample": "Organics / AC hum1",
+        "level": 0.05,
+        "lp": "280 Hz"
+      },
+      "filter": {
+        "type": "MG Low 24",
+        "cutoff": "320 Hz",
+        "reso": 16,
+        "drive": 14,
+        "envAmt": "+28%"
+      },
+      "env1": {
+        "a": "8 ms",
+        "d": "240 ms",
+        "s": 0.86,
+        "r": "200 ms"
+      },
+      "env2": {
+        "a": "4 ms",
+        "d": "300 ms",
+        "s": 0.3,
+        "r": "160 ms"
+      },
+      "lfo1": {
+        "rate": "1/2",
+        "shape": "Sine",
+        "dest": "OSC A Warp (PWM)",
+        "amount": "35%"
+      },
+      "fx": [
+        "Chorus Mix 12 (Juno-ish)",
+        "Tape 20 / 28",
+        "Compressor 3:1",
+        "Delay 1/8 Mix 6"
+      ],
+      "macros": [
+        "Drive → Tape",
+        "Width → Chorus + Unison",
+        "Dark → Cutoff",
+        "PWM → Warp amt"
+      ],
+      "matrix": [
+        "LFO 1 → OSC A Warp",
+        "Env 2 → Filter"
+      ],
+      "notes": "Closest cousin to Memories Imposing without the loud hum. A 126 default bass."
+    }
+  }
+]
