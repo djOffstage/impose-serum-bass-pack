@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "mono-nerve",
+  "n": 10,
+  "name": "Mono Nerve",
+  "slug": "IMPOSE_10_Mono_Nerve",
+  "category": "reese",
+  "tags": [
+    "tight",
+    "mid",
+    "mono"
+  ],
+  "key": "C",
+  "bpm": 134,
+  "description": "Reese folded into mono. Aggressive mid, no stereo smear.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 3,
+      "detune": 9,
+      "blend": 30,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Dirty Saw",
+      "level": 0.66
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.32,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 9,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.3
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "620 Hz",
+      "reso": 22,
+      "drive": 24,
+      "envAmt": "+30%"
+    },
+    "env1": {
+      "a": "4 ms",
+      "d": "160 ms",
+      "s": 0.86,
+      "r": "120 ms"
+    },
+    "env2": {
+      "a": "2 ms",
+      "d": "220 ms",
+      "s": 0.25,
+      "r": "100 ms"
+    },
+    "lfo1": {
+      "rate": "Off",
+      "shape": "Sine",
+      "dest": "—",
+      "amount": "0"
+    },
+    "fx": [
+      "Distortion — Diode 38 / 50",
+      "EQ — 700 Hz +1, 3k −2",
+      "Compressor 6:1",
+      "Utility — Mono"
+    ],
+    "macros": [
+      "Drive → Diode",
+      "Width → Unison (keep low)",
+      "Dark → Cutoff",
+      "Mid → EQ 700"
+    ],
+    "matrix": [
+      "Env 2 → Filter"
+    ],
+    "notes": "Designed to sit under a vocal without stereo fight."
+  }
+}
