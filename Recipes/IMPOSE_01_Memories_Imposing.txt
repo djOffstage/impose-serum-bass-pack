@@ -1,0 +1,61 @@
+IMPOSE  01  MEMORIES IMPOSING
+File        : IMPOSE_01_Memories_Imposing
+Category    : Hum / Organic
+Key         : C     Tempo hint 126 BPM
+Tags        : analog, hum, tech house, reference
+
+Recreation of the attached AU_MTF patch: analog saw/square spine, AC-hum noise bed, slow imposing filter. The hum stays at 60 Hz while the bass tracks pitch.
+
+OSC A
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0.12
+  Warp      : Sync  0.12
+  Unison    : 3    Detune 8    Blend 35
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.7    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.28
+  Warp      : Off  0
+  Unison    : 2    Detune 4    Blend 0
+  Octave    : -1    Semi 0    Fine 6
+  Level     : 0.3    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample Organics / AC hum1    Level 0.14    LP 420 Hz
+
+FILTER
+  Type MG Low 24    Cutoff 190 Hz    Reso 18
+  Drive 22    Env Amt +38%
+
+ENV 1 (amp)     A 10 ms   D 280 ms   S 0.86   R 240 ms
+ENV 2 (filter)  A 4 ms   D 420 ms   S 0.28   R 180 ms
+
+LFO 1
+  Rate 1/1    Shape Sine
+  Dest Filter Cutoff    Amt 8%
+
+FX RACK
+  1. Distortion — Tube, Drive 32, Mix 40
+  2. EQ — Low shelf +2.5 dB @ 75 Hz, dip −1.5 dB @ 280 Hz
+  3. Compressor — 4:1, Attack 28 ms, Makeup +3
+  4. Hyper / Dimension — Mix 10
+  5. Delay — 1/8 dotted, Mix 8, HP 220 Hz
+
+MACROS
+  1 Drive → Dist Drive + Filter Drive
+  2 Width → Unison Detune + Hyper Mix
+  3 Dark → Filter Cutoff (invert)
+  4 Hum → Noise Level
+
+MOD MATRIX
+  • Env 2 → Filter Cutoff
+  • LFO 1 → Filter Cutoff (aux)
+  • Vel → Amp
+
+NOTES
+  Leave the AC hum un-keyed so it sits at 60 Hz. High-pass the noise around 40 Hz so it does not fight the sub. Play C1–C2, mono, slight glide.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_01_Memories_Imposing.SerumPreset
