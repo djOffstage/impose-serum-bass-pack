@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "rolling-square",
+  "n": 14,
+  "name": "Rolling Square",
+  "slug": "IMPOSE_14_Rolling_Square",
+  "category": "acid",
+  "tags": [
+    "house",
+    "16ths",
+    "groove"
+  ],
+  "key": "F",
+  "bpm": 126,
+  "description": "Less resonant than Acid Memory. Rolls under a 126 groove without stealing the hats.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.3,
+      "warp": "PWM",
+      "warpAmt": 0.14,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.7
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.16
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "420 Hz",
+      "reso": 38,
+      "drive": 18,
+      "envAmt": "+55%"
+    },
+    "env1": {
+      "a": "3 ms",
+      "d": "140 ms",
+      "s": 0.74,
+      "r": "100 ms"
+    },
+    "env2": {
+      "a": "2 ms",
+      "d": "220 ms",
+      "s": 0.16,
+      "r": "80 ms"
+    },
+    "lfo1": {
+      "rate": "1/16",
+      "shape": "Saw",
+      "dest": "Filter Cutoff",
+      "amount": "10%"
+    },
+    "fx": [
+      "Distortion Tube 24 / 32",
+      "Delay 1/16 Mix 6",
+      "Compressor 3:1"
+    ],
+    "macros": [
+      "Drive → Tube",
+      "Width → Delay",
+      "Dark → Cutoff",
+      "Roll → LFO amt"
+    ],
+    "matrix": [
+      "LFO 1 → Filter",
+      "Env 2 → Filter"
+    ],
+    "notes": "Sequence in 16ths, leave gaps. The saw just thickens the square."
+  }
+}
