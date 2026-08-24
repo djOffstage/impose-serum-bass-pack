@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "last-call",
+  "n": 8,
+  "name": "Last Call",
+  "slug": "IMPOSE_08_Last_Call",
+  "category": "sub",
+  "tags": [
+    "dusty",
+    "delay",
+    "closer"
+  ],
+  "key": "D",
+  "bpm": 116,
+  "description": "Tired round bass with a dotted delay ghost. Last-song material.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.66
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": -12,
+      "pan": 18,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.18
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "210 Hz",
+      "reso": 12,
+      "drive": 8,
+      "envAmt": "+12%"
+    },
+    "env1": {
+      "a": "24 ms",
+      "d": "400 ms",
+      "s": 0.76,
+      "r": "420 ms"
+    },
+    "env2": {
+      "a": "12 ms",
+      "d": "480 ms",
+      "s": 0.22,
+      "r": "260 ms"
+    },
+    "lfo1": {
+      "rate": "1/2",
+      "shape": "Sine",
+      "dest": "Delay Mix",
+      "amount": "6%"
+    },
+    "fx": [
+      "Delay — 1/8 dotted, Mix 16, Feedback 32, HP 200",
+      "Chorus — Mix 12",
+      "Tape sat 18"
+    ],
+    "macros": [
+      "Drive → Sat",
+      "Width → OSC B pan",
+      "Dark → Cutoff",
+      "Space → Delay mix"
+    ],
+    "matrix": [
+      "LFO 1 → Delay Mix"
+    ],
+    "notes": "Mute delay on the last bar of a phrase."
+  }
+}
