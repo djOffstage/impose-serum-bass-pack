@@ -1,0 +1,63 @@
+IMPOSE  11  FROZEN FM
+File        : IMPOSE_11_Frozen_FM
+Category    : Reese / Neuro
+Key         : E     Tempo hint 140 BPM
+Tags        : fm, metallic, cold
+
+Bell-adjacent FM bass. Icy, useful as a mid-bass over a sine sub.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : FM (from B)  0.42
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.64    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.34    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 700 Hz    Reso 18
+  Drive 10    Env Amt +34%
+
+ENV 1 (amp)     A 3 ms   D 180 ms   S 0.7   R 160 ms
+ENV 2 (filter)  A 1 ms   D 220 ms   S 0.18   R 120 ms
+
+LFO 1
+  Rate 1/8    Shape Sine
+  Dest Warp Amt    Amt 8%
+
+FX RACK
+  1. EQ — 1.2k +1.5 metallic
+  2. Compressor 4:1
+  3. Delay 1/16 Mix 6
+
+MACROS
+  1 Drive → Dist
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Index → Warp Amt
+
+MOD MATRIX
+  • LFO 1 → OSC A Warp
+  • Env 2 → Filter
+
+NOTES
+  OSC B is FM source — keep its level at 0 and route via warp.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_11_Frozen_FM.SerumPreset
