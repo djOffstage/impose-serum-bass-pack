@@ -1,0 +1,1600 @@
+IMPOSE — Serum 2 Bass Pack
+24 analog / tech-house / reese / acid / 808 / growl patches
+Inspired by AU_MT_bass_memories_imposing (Organics / AC hum1)
+
+============================================================
+WHAT IS IN THIS ZIP
+============================================================
+/Original/   Reference Serum 1 .fxp — loads in Serum 2
+/Recipes/    One text sheet per patch (rebuild in ~2 minutes)
+/JSON/       Machine-readable recipes
+/OneShots/   C2 WAV previews rendered from the IMPOSE engine
+
+============================================================
+SERUM 2 — HOW TO INSTALL
+============================================================
+1. ORIGINAL REFERENCE (.fxp)
+   Drag AU_MTF_bass_synth_memories_imposing.fxp onto Serum 2,
+   or Menu → Open Preset and choose the .fxp.
+   Serum 2 converts legacy Serum 1 presets on load.
+
+2. REBUILD THE 24 IMPOSE PATCHES
+   Open each file in /Recipes/. Init a Serum 2 patch and match
+   OSC A/B/C, Noise, Filter, Envelopes, LFO, FX, Macros.
+   Factory wavetables only (Analog / Juno Saw, Basic Shapes,
+   I Saw The Sine, PWM, Dirty Saw, Organics / AC hum1).
+   Save as .SerumPreset into:
+     Documents/Xfer/Serum 2 Presets/User/IMPOSE/
+   Then Menu → Rescan folders on disk.
+
+3. ONE-SHOTS
+   Drop /OneShots/ into FL Studio, Ableton, or a sampler if you
+   want the sound now and the synth later.
+
+============================================================
+WHY THERE ARE NO .SerumPreset BINARIES
+============================================================
+Serum 2's native format is compressed CBOR. Files generated
+without Serum will crash the plugin. These recipes use factory
+wavetables and exact knob values so a rebuild is safe.
+
+The included .fxp is the real reference patch you supplied
+(AU_MT_bass_memories_imposing) and is the one file that loads
+natively today.
+
+============================================================
+PLAYING NOTES
+============================================================
+Range     C1–C3 (sub lives at C1; C2 reads on laptop speakers)
+Mono      recommended on HUM / SUB / 808
+Wobbles   hold a note, lock LFO to host
+Macros    1 Drive   2 Width   3 Dark   4 Texture / Hum
+
+Pack  IMPOSE 1.0
+
+
+============================================================
+24 PATCH SHEETS
+============================================================
+
+
+------------------------------------------------------------
+IMPOSE_01_Memories_Imposing.txt
+------------------------------------------------------------
+IMPOSE  01  MEMORIES IMPOSING
+File        : IMPOSE_01_Memories_Imposing
+Category    : Hum / Organic
+Key         : C     Tempo hint 126 BPM
+Tags        : analog, hum, tech house, reference
+
+Recreation of the attached AU_MTF patch: analog saw/square spine, AC-hum noise bed, slow imposing filter. The hum stays at 60 Hz while the bass tracks pitch.
+
+OSC A
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0.12
+  Warp      : Sync  0.12
+  Unison    : 3    Detune 8    Blend 35
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.7    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.28
+  Warp      : Off  0
+  Unison    : 2    Detune 4    Blend 0
+  Octave    : -1    Semi 0    Fine 6
+  Level     : 0.3    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample Organics / AC hum1    Level 0.14    LP 420 Hz
+
+FILTER
+  Type MG Low 24    Cutoff 190 Hz    Reso 18
+  Drive 22    Env Amt +38%
+
+ENV 1 (amp)     A 10 ms   D 280 ms   S 0.86   R 240 ms
+ENV 2 (filter)  A 4 ms   D 420 ms   S 0.28   R 180 ms
+
+LFO 1
+  Rate 1/1    Shape Sine
+  Dest Filter Cutoff    Amt 8%
+
+FX RACK
+  1. Distortion — Tube, Drive 32, Mix 40
+  2. EQ — Low shelf +2.5 dB @ 75 Hz, dip −1.5 dB @ 280 Hz
+  3. Compressor — 4:1, Attack 28 ms, Makeup +3
+  4. Hyper / Dimension — Mix 10
+  5. Delay — 1/8 dotted, Mix 8, HP 220 Hz
+
+MACROS
+  1 Drive → Dist Drive + Filter Drive
+  2 Width → Unison Detune + Hyper Mix
+  3 Dark → Filter Cutoff (invert)
+  4 Hum → Noise Level
+
+MOD MATRIX
+  • Env 2 → Filter Cutoff
+  • LFO 1 → Filter Cutoff (aux)
+  • Vel → Amp
+
+NOTES
+  Leave the AC hum un-keyed so it sits at 60 Hz. High-pass the noise around 40 Hz so it does not fight the sub. Play C1–C2, mono, slight glide.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_01_Memories_Imposing.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_02_Ghost_Hum.txt
+------------------------------------------------------------
+IMPOSE  02  GHOST HUM
+File        : IMPOSE_02_Ghost_Hum
+Category    : Hum / Organic
+Key         : A     Tempo hint 122 BPM
+Tags        : noise, organic, dark
+
+Thinner oscillator, louder electrical bed. For breakdowns and tension fills.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0.2
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.45    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0.05
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine -8
+  Level     : 0.2    Pan -12
+OSC C
+  Off
+NOISE
+  On    Sample Organics / AC hum1    Level 0.26    LP 380 Hz
+
+FILTER
+  Type MG Low 24    Cutoff 150 Hz    Reso 10
+  Drive 12    Env Amt +18%
+
+ENV 1 (amp)     A 18 ms   D 320 ms   S 0.8   R 320 ms
+ENV 2 (filter)  A 8 ms   D 500 ms   S 0.2   R 220 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest Noise Level    Amt 12%
+
+FX RACK
+  1. EQ — HP 32 Hz
+  2. Chorus — Mix 16
+  3. Compressor — 3:1 slow
+  4. Delay — 1/4, Mix 10
+
+MACROS
+  1 Drive → Dist
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Hum → Noise
+
+MOD MATRIX
+  • LFO 1 → Noise Level
+  • Env 2 → Filter
+
+NOTES
+  Ride Macro 4. Keep OSC A quiet so the hum is the character.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_02_Ghost_Hum.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_03_Grid_Voltage.txt
+------------------------------------------------------------
+IMPOSE  03  GRID VOLTAGE
+File        : IMPOSE_03_Grid_Voltage
+Category    : Hum / Organic
+Key         : F     Tempo hint 128 BPM
+Tags        : industrial, 60Hz, mono
+
+60 Hz harmonic stack beating against a slightly sharp saw. Warehouse tension.
+
+OSC A
+  Wavetable : Dirty Saw
+  WT Pos    : 0.08
+  Warp      : Off  0
+  Unison    : 2    Detune 5    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.62    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 3
+  Level     : 0.22    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample Organics / AC hum1    Level 0.2    LP 500 Hz
+
+FILTER
+  Type MG Low 24    Cutoff 230 Hz    Reso 22
+  Drive 28    Env Amt +24%
+
+ENV 1 (amp)     A 6 ms   D 180 ms   S 0.88   R 160 ms
+ENV 2 (filter)  A 2 ms   D 260 ms   S 0.3   R 120 ms
+
+LFO 1
+  Rate 1/8    Shape Sine
+  Dest OSC B Fine    Amt 4 cents
+
+FX RACK
+  1. Distortion — Diode, Drive 40, Mix 48
+  2. EQ — 60 Hz +1.5, 120 Hz +1
+  3. Compressor — 6:1
+
+MACROS
+  1 Drive → Dist
+  2 Width → Unison
+  3 Dark → Cutoff
+  4 Hum → Noise
+
+MOD MATRIX
+  • LFO 1 → OSC B Fine
+
+NOTES
+  Keep it mono. The beating is the point.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_03_Grid_Voltage.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_04_Afterhours.txt
+------------------------------------------------------------
+IMPOSE  04  AFTERHOURS
+File        : IMPOSE_04_Afterhours
+Category    : Hum / Organic
+Key         : G     Tempo hint 118 BPM
+Tags        : warm, late night, chorus
+
+Dusty round bass, slow chorus, tape-like saturation. 2am closer.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0.35
+  Warp      : Off  0
+  Unison    : 2    Detune 6    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.58    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine -5
+  Level     : 0.24    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample Organics / AC hum1    Level 0.08    LP 300 Hz
+
+FILTER
+  Type MS2 Low 24    Cutoff 270 Hz    Reso 12
+  Drive 14    Env Amt +20%
+
+ENV 1 (amp)     A 22 ms   D 360 ms   S 0.8   R 360 ms
+ENV 2 (filter)  A 10 ms   D 480 ms   S 0.25   R 240 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest Chorus Mix    Amt 6%
+
+FX RACK
+  1. Distortion — Tape, Drive 24, Mix 30
+  2. Chorus — Mix 22
+  3. Delay — 1/4, Mix 10
+  4. Reverb — Room 6%
+
+MACROS
+  1 Drive → Tape
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Hum → Noise
+
+MOD MATRIX
+  • Env 2 → Filter
+
+NOTES
+  Longer release. Let it bloom into the next chord.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_04_Afterhours.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_05_Night_Bus.txt
+------------------------------------------------------------
+IMPOSE  05  NIGHT BUS
+File        : IMPOSE_05_Night_Bus
+Category    : Sub / Round
+Key         : C     Tempo hint 126 BPM
+Tags        : tech house, round, 126
+
+Clean round tech-house sub. Sine + barely-there saw. Translates on a club system.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.78    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 2    Detune 3    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.18    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 170 Hz    Reso 8
+  Drive 8    Env Amt +16%
+
+ENV 1 (amp)     A 6 ms   D 180 ms   S 0.9   R 140 ms
+ENV 2 (filter)  A 3 ms   D 220 ms   S 0.35   R 100 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. EQ — Low shelf +1.5 @ 60, HP 28 Hz
+  2. Compressor — 3:1, slow
+  3. Utility — Mono below 140 Hz
+
+MACROS
+  1 Drive → Soft clip
+  2 Width → OSC B level
+  3 Dark → Cutoff
+  4 Click → Env2 amt
+
+MOD MATRIX
+  • Env 2 → Filter Cutoff
+
+NOTES
+  The saw is only there so the sub reads on small speakers. Keep it mono under 140 Hz.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_05_Night_Bus.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_06_Warehouse_Pillar.txt
+------------------------------------------------------------
+IMPOSE  06  WAREHOUSE PILLAR
+File        : IMPOSE_06_Warehouse_Pillar
+Category    : Sub / Round
+Key         : F     Tempo hint 128 BPM
+Tags        : huge, mono, peak time
+
+A column of sub. Slight clip, almost no mid. Drop this under a perc loop.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.85    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.08
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.14    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.4    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 12    Cutoff 130 Hz    Reso 6
+  Drive 18    Env Amt +10%
+
+ENV 1 (amp)     A 4 ms   D 140 ms   S 0.92   R 120 ms
+ENV 2 (filter)  A 2 ms   D 180 ms   S 0.4   R 80 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion — Soft clip, Drive 22, Mix 30
+  2. Compressor — 5:1
+  3. Utility — Force mono
+
+MACROS
+  1 Drive → Clip
+  2 Width → (leave at 0)
+  3 Dark → Cutoff
+  4 Sub → OSC C
+
+MOD MATRIX
+  • Vel → Amp slightly
+
+NOTES
+  OSC C is the true sub. Do not unison it.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_06_Warehouse_Pillar.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_07_Velvet_Floor.txt
+------------------------------------------------------------
+IMPOSE  07  VELVET FLOOR
+File        : IMPOSE_07_Velvet_Floor
+Category    : Sub / Round
+Key         : A     Tempo hint 120 BPM
+Tags        : soft, tape, deep house
+
+Saturated sine that kisses the speakers instead of punching them.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.72    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.1
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 3
+  Level     : 0.22    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MS2 Low 24    Cutoff 250 Hz    Reso 10
+  Drive 10    Env Amt +14%
+
+ENV 1 (amp)     A 16 ms   D 300 ms   S 0.84   R 280 ms
+ENV 2 (filter)  A 8 ms   D 340 ms   S 0.3   R 180 ms
+
+LFO 1
+  Rate 1/1    Shape Sine
+  Dest Filter Cutoff    Amt 5%
+
+FX RACK
+  1. Distortion — Tape, Drive 28, Mix 38
+  2. Chorus — Mix 12
+  3. EQ — air dip 3k −1
+
+MACROS
+  1 Drive → Tape
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Air → EQ 3k
+
+MOD MATRIX
+  • LFO 1 → Filter
+
+NOTES
+  Longer attack. Sits under pads without fighting them.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_07_Velvet_Floor.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_08_Last_Call.txt
+------------------------------------------------------------
+IMPOSE  08  LAST CALL
+File        : IMPOSE_08_Last_Call
+Category    : Sub / Round
+Key         : D     Tempo hint 116 BPM
+Tags        : dusty, delay, closer
+
+Tired round bass with a dotted delay ghost. Last-song material.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.66    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine -12
+  Level     : 0.18    Pan 18
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 210 Hz    Reso 12
+  Drive 8    Env Amt +12%
+
+ENV 1 (amp)     A 24 ms   D 400 ms   S 0.76   R 420 ms
+ENV 2 (filter)  A 12 ms   D 480 ms   S 0.22   R 260 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest Delay Mix    Amt 6%
+
+FX RACK
+  1. Delay — 1/8 dotted, Mix 16, Feedback 32, HP 200
+  2. Chorus — Mix 12
+  3. Tape sat 18
+
+MACROS
+  1 Drive → Sat
+  2 Width → OSC B pan
+  3 Dark → Cutoff
+  4 Space → Delay mix
+
+MOD MATRIX
+  • LFO 1 → Delay Mix
+
+NOTES
+  Mute delay on the last bar of a phrase.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_08_Last_Call.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_09_Velvet_Reese.txt
+------------------------------------------------------------
+IMPOSE  09  VELVET REESE
+File        : IMPOSE_09_Velvet_Reese
+Category    : Reese / Neuro
+Key         : A#     Tempo hint 132 BPM
+Tags        : detune, neuro, wide
+
+Classic two-saw reese, not screamy. Works in house and DnB at different octaves.
+
+OSC A
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 5    Detune 18    Blend 55
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.62    Pan 0
+OSC B
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine -14
+  Level     : 0.3    Pan 8
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.28    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 480 Hz    Reso 16
+  Drive 16    Env Amt +22%
+
+ENV 1 (amp)     A 8 ms   D 240 ms   S 0.84   R 200 ms
+ENV 2 (filter)  A 4 ms   D 320 ms   S 0.3   R 160 ms
+
+LFO 1
+  Rate 1/4    Shape Sine
+  Dest Unison Detune    Amt 6%
+
+FX RACK
+  1. Distortion — Tube 30 / 40
+  2. Chorus — Mix 14
+  3. EQ — 200 Hz dip −1.5
+  4. Compressor 4:1
+
+MACROS
+  1 Drive → Tube
+  2 Width → Unison detune
+  3 Dark → Cutoff
+  4 Grit → OSC B
+
+MOD MATRIX
+  • LFO 1 → Unison Detune
+  • Env 2 → Filter
+
+NOTES
+  Drop an octave for 174 DnB. Keep OSC C mono.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_09_Velvet_Reese.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_10_Mono_Nerve.txt
+------------------------------------------------------------
+IMPOSE  10  MONO NERVE
+File        : IMPOSE_10_Mono_Nerve
+Category    : Reese / Neuro
+Key         : C     Tempo hint 134 BPM
+Tags        : tight, mid, mono
+
+Reese folded into mono. Aggressive mid, no stereo smear.
+
+OSC A
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 3    Detune 9    Blend 30
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.66    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.32
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 9
+  Level     : 0.3    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 620 Hz    Reso 22
+  Drive 24    Env Amt +30%
+
+ENV 1 (amp)     A 4 ms   D 160 ms   S 0.86   R 120 ms
+ENV 2 (filter)  A 2 ms   D 220 ms   S 0.25   R 100 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion — Diode 38 / 50
+  2. EQ — 700 Hz +1, 3k −2
+  3. Compressor 6:1
+  4. Utility — Mono
+
+MACROS
+  1 Drive → Diode
+  2 Width → Unison (keep low)
+  3 Dark → Cutoff
+  4 Mid → EQ 700
+
+MOD MATRIX
+  • Env 2 → Filter
+
+NOTES
+  Designed to sit under a vocal without stereo fight.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_10_Mono_Nerve.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_11_Frozen_FM.txt
+------------------------------------------------------------
+IMPOSE  11  FROZEN FM
+File        : IMPOSE_11_Frozen_FM
+Category    : Reese / Neuro
+Key         : E     Tempo hint 140 BPM
+Tags        : fm, metallic, cold
+
+Bell-adjacent FM bass. Icy, useful as a mid-bass over a sine sub.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : FM (from B)  0.42
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.64    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.34    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 700 Hz    Reso 18
+  Drive 10    Env Amt +34%
+
+ENV 1 (amp)     A 3 ms   D 180 ms   S 0.7   R 160 ms
+ENV 2 (filter)  A 1 ms   D 220 ms   S 0.18   R 120 ms
+
+LFO 1
+  Rate 1/8    Shape Sine
+  Dest Warp Amt    Amt 8%
+
+FX RACK
+  1. EQ — 1.2k +1.5 metallic
+  2. Compressor 4:1
+  3. Delay 1/16 Mix 6
+
+MACROS
+  1 Drive → Dist
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Index → Warp Amt
+
+MOD MATRIX
+  • LFO 1 → OSC A Warp
+  • Env 2 → Filter
+
+NOTES
+  OSC B is FM source — keep its level at 0 and route via warp.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_11_Frozen_FM.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_12_Chrome_Split.txt
+------------------------------------------------------------
+IMPOSE  12  CHROME SPLIT
+File        : IMPOSE_12_Chrome_Split
+Category    : Reese / Neuro
+Key         : G     Tempo hint 128 BPM
+Tags        : wide, stereo, peak
+
+Hard-panned dual saws. Huge on headphones, still has a mono sub.
+
+OSC A
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 7    Detune 22    Blend 70
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.55    Pan 0
+OSC B
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 11
+  Level     : 0.22    Pan -30
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.36    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 560 Hz    Reso 14
+  Drive 12    Env Amt +18%
+
+ENV 1 (amp)     A 7 ms   D 220 ms   S 0.85   R 180 ms
+ENV 2 (filter)  A 4 ms   D 280 ms   S 0.28   R 140 ms
+
+LFO 1
+  Rate 1/4    Shape Triangle
+  Dest OSC B Pan    Amt 20%
+
+FX RACK
+  1. Hyper / Dimension Mix 22
+  2. Chorus Mix 16
+  3. Compressor 3:1
+  4. Utility mono < 120 Hz
+
+MACROS
+  1 Drive → Sat
+  2 Width → Hyper + Unison
+  3 Dark → Cutoff
+  4 Spread → OSC B pan
+
+MOD MATRIX
+  • LFO 1 → OSC B Pan
+
+NOTES
+  Check in mono — the sub must survive.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_12_Chrome_Split.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_13_Acid_Memory.txt
+------------------------------------------------------------
+IMPOSE  13  ACID MEMORY
+File        : IMPOSE_13_Acid_Memory
+Category    : Acid / 303
+Key         : C     Tempo hint 126 BPM
+Tags        : 303, resonance, house
+
+303-style square with a hungry filter envelope. Classic acid, not cartoon.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0.32
+  Warp      : PWM  0.18
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.78    Pan 0
+OSC B
+  Off
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type Acid / MG Low 24    Cutoff 360 Hz    Reso 62
+  Drive 28    Env Amt +78%
+
+ENV 1 (amp)     A 2 ms   D 120 ms   S 0.7   R 80 ms
+ENV 2 (filter)  A 1 ms   D 180 ms   S 0.08   R 60 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion — Acid / Diode 34 / 45
+  2. EQ — 300 Hz dip if it honks
+  3. Delay 1/8 dotted Mix 8
+
+MACROS
+  1 Drive → Dist + Filter Drive
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Squelch → Reso
+
+MOD MATRIX
+  • Env 2 → Filter Cutoff (main)
+  • Accent (vel) → Env2 amt
+
+NOTES
+  Program 16th sequences with accent on offbeats. Env 2 is the instrument.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_13_Acid_Memory.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_14_Rolling_Square.txt
+------------------------------------------------------------
+IMPOSE  14  ROLLING SQUARE
+File        : IMPOSE_14_Rolling_Square
+Category    : Acid / 303
+Key         : F     Tempo hint 126 BPM
+Tags        : house, 16ths, groove
+
+Less resonant than Acid Memory. Rolls under a 126 groove without stealing the hats.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0.3
+  Warp      : PWM  0.14
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.7    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.16    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 420 Hz    Reso 38
+  Drive 18    Env Amt +55%
+
+ENV 1 (amp)     A 3 ms   D 140 ms   S 0.74   R 100 ms
+ENV 2 (filter)  A 2 ms   D 220 ms   S 0.16   R 80 ms
+
+LFO 1
+  Rate 1/16    Shape Saw
+  Dest Filter Cutoff    Amt 10%
+
+FX RACK
+  1. Distortion Tube 24 / 32
+  2. Delay 1/16 Mix 6
+  3. Compressor 3:1
+
+MACROS
+  1 Drive → Tube
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Roll → LFO amt
+
+MOD MATRIX
+  • LFO 1 → Filter
+  • Env 2 → Filter
+
+NOTES
+  Sequence in 16ths, leave gaps. The saw just thickens the square.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_14_Rolling_Square.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_15_Heatwave.txt
+------------------------------------------------------------
+IMPOSE  15  HEATWAVE
+File        : IMPOSE_15_Heatwave
+Category    : Acid / 303
+Key         : G     Tempo hint 130 BPM
+Tags        : hot, reso, peak
+
+Resonance pushed into self-oscillation territory. Handle with a high-cut.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0.34
+  Warp      : PWM  0.22
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.64    Pan 0
+OSC B
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0.2    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type Acid    Cutoff 500 Hz    Reso 78
+  Drive 36    Env Amt +70%
+
+ENV 1 (amp)     A 1 ms   D 100 ms   S 0.68   R 70 ms
+ENV 2 (filter)  A 0.5 ms   D 140 ms   S 0.05   R 50 ms
+
+LFO 1
+  Rate 1/8    Shape Triangle
+  Dest Reso    Amt 8%
+
+FX RACK
+  1. Distortion Fold 40 / 52
+  2. EQ — HP 80, LP 6k (protect tweeters)
+  3. Compressor 5:1
+
+MACROS
+  1 Drive → Fold
+  2 Width → OSC B
+  3 Dark → Cutoff
+  4 Squelch → Reso
+
+MOD MATRIX
+  • Env 2 → Filter (main)
+  • LFO 1 → Reso
+
+NOTES
+  Put a safety LP at 6 kHz on the channel. This one screams.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_15_Heatwave.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_16_Concrete_808.txt
+------------------------------------------------------------
+IMPOSE  16  CONCRETE 808
+File        : IMPOSE_16_Concrete_808
+Category    : 808 / Punch
+Key         : C     Tempo hint 128 BPM
+Tags        : 808, punch, trap-house
+
+Sine 808 with a pitch drop. Hard enough for trap, round enough for house.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.92    Pan 0
+OSC B
+  Off
+OSC C
+  Off
+NOISE
+  On    Sample One-shots / Click short    Level 0.08    LP 2.2 kHz
+
+FILTER
+  Type MG Low 12    Cutoff 170 Hz    Reso 6
+  Drive 10    Env Amt +8%
+
+ENV 1 (amp)     A 0 ms   D 420 ms   S 0.32   R 280 ms
+ENV 2 (filter)  A 0 ms   D 70 ms   S 0   R 40 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion Tape 18 / 22
+  2. Compressor 4:1, Attack 8 ms
+  3. EQ 50 Hz +2
+
+MACROS
+  1 Drive → Tape
+  2 Punch → Pitch env amt
+  3 Dark → Cutoff
+  4 Click → Noise
+
+MOD MATRIX
+  • Env 2 → OSC A Pitch (+12 to +19 st)
+  • Env 1 → Amp (exponential)
+
+NOTES
+  Tune per track. Pitch env is Env 2 → pitch, 50–80 ms decay.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_16_Concrete_808.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_17_Soft_Clipper.txt
+------------------------------------------------------------
+IMPOSE  17  SOFT CLIPPER
+File        : IMPOSE_17_Soft_Clipper
+Category    : 808 / Punch
+Key         : F     Tempo hint 130 BPM
+Tags        : 808, saturated, loud
+
+Same 808 body, pushed into soft clip so it stays loud on small speakers.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.88    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.08
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.16    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample One-shots / Click short    Level 0.06    LP 1.8 kHz
+
+FILTER
+  Type MG Low 12    Cutoff 210 Hz    Reso 8
+  Drive 16    Env Amt +10%
+
+ENV 1 (amp)     A 0 ms   D 380 ms   S 0.4   R 240 ms
+ENV 2 (filter)  A 0 ms   D 60 ms   S 0   R 30 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion — Soft clip Drive 44 Mix 62
+  2. Compressor 5:1
+  3. EQ 90 Hz +1.5
+
+MACROS
+  1 Drive → Clip
+  2 Punch → Pitch env
+  3 Dark → Cutoff
+  4 Click → Noise
+
+MOD MATRIX
+  • Env 2 → OSC A Pitch
+
+NOTES
+  Gain-stage so the clipper is the loudness, not the channel fader.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_17_Soft_Clipper.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_18_Low_Voltage.txt
+------------------------------------------------------------
+IMPOSE  18  LOW VOLTAGE
+File        : IMPOSE_18_Low_Voltage
+Category    : 808 / Punch
+Key         : C     Tempo hint 126 BPM
+Tags        : short, clicky, percussive
+
+Short 808 / kick-bass hybrid. Use as a pattern bass, not a drone.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.82    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.12
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0.18    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample One-shots / Click short    Level 0.12    LP 3 kHz
+
+FILTER
+  Type MG Low 24    Cutoff 300 Hz    Reso 14
+  Drive 12    Env Amt +40%
+
+ENV 1 (amp)     A 0 ms   D 160 ms   S 0.08   R 90 ms
+ENV 2 (filter)  A 0 ms   D 50 ms   S 0   R 30 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion Tube 22 / 30
+  2. Compressor 6:1 fast
+  3. EQ click 3k +1
+
+MACROS
+  1 Drive → Tube
+  2 Punch → Pitch env
+  3 Dark → Cutoff
+  4 Click → Noise
+
+MOD MATRIX
+  • Env 2 → Pitch + Filter
+
+NOTES
+  Program like a kick. Leave space on the 2 and 4 if a real kick is in the track.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_18_Low_Voltage.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_19_Pressure_Cooker.txt
+------------------------------------------------------------
+IMPOSE  19  PRESSURE COOKER
+File        : IMPOSE_19_Pressure_Cooker
+Category    : Distort / Growl
+Key         : D     Tempo hint 128 BPM
+Tags        : driven, mid, aggressive
+
+Everything into the tube. Mid-bass that shoves a mix forward.
+
+OSC A
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 3    Detune 10    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.62    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.3
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.32    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.24    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 460 Hz    Reso 24
+  Drive 36    Env Amt +40%
+
+ENV 1 (amp)     A 5 ms   D 200 ms   S 0.84   R 160 ms
+ENV 2 (filter)  A 2 ms   D 240 ms   S 0.22   R 120 ms
+
+LFO 1
+  Rate 1/8    Shape Sine
+  Dest Drive    Amt 10%
+
+FX RACK
+  1. Distortion Tube Drive 58 Mix 70
+  2. EQ 250 −2 (mud)
+  3. Compressor 6:1
+  4. Clipper ceiling
+
+MACROS
+  1 Drive → Tube
+  2 Width → Unison
+  3 Dark → Cutoff
+  4 Grit → Filter drive
+
+MOD MATRIX
+  • LFO 1 → Dist Drive
+  • Env 2 → Filter
+
+NOTES
+  Watch the 250 Hz build-up. High-pass anything else in that region.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_19_Pressure_Cooker.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_20_Dirt_Organ.txt
+------------------------------------------------------------
+IMPOSE  20  DIRT ORGAN
+File        : IMPOSE_20_Dirt_Organ
+Category    : Distort / Growl
+Key         : A     Tempo hint 118 BPM
+Tags        : organ, harmonic, growl
+
+Drawbar-ish harmonic stack into mild foldback. Church-basement bass.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.5    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0.28    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 1    Semi 0    Fine 0
+  Level     : 0.12    Pan 10
+NOISE
+  Off
+
+FILTER
+  Type MS2 Low 24    Cutoff 520 Hz    Reso 16
+  Drive 14    Env Amt +18%
+
+ENV 1 (amp)     A 12 ms   D 260 ms   S 0.82   R 220 ms
+ENV 2 (filter)  A 6 ms   D 300 ms   S 0.28   R 160 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest OSC C level    Amt 10%
+
+FX RACK
+  1. Distortion Fold 34 / 48
+  2. Chorus Mix 14
+  3. EQ 700 +1 (body)
+  4. Reverb Room 5%
+
+MACROS
+  1 Drive → Fold
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Pipe → OSC C
+
+MOD MATRIX
+  • LFO 1 → OSC C Level
+
+NOTES
+  OSC A/B/C are 8', 4', 2' drawbars. Blend, don't unison.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_20_Dirt_Organ.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_21_Deep_Fold.txt
+------------------------------------------------------------
+IMPOSE  21  DEEP FOLD
+File        : IMPOSE_21_Deep_Fold
+Category    : Distort / Growl
+Key         : E     Tempo hint 122 BPM
+Tags        : wavefold, west coast, odd
+
+West-coast fold on a sine. Harmonics bloom as you lean on Drive.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Bend +/-  0.08
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.74    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 5
+  Level     : 0.18    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 880 Hz    Reso 10
+  Drive 8    Env Amt +18%
+
+ENV 1 (amp)     A 6 ms   D 220 ms   S 0.84   R 180 ms
+ENV 2 (filter)  A 4 ms   D 260 ms   S 0.3   R 140 ms
+
+LFO 1
+  Rate 1/4    Shape Sine
+  Dest Fold drive    Amt 14%
+
+FX RACK
+  1. Distortion Fold Drive 62 Mix 80
+  2. EQ HP 40
+  3. Compressor 3:1
+  4. Delay 1/8 Mix 8
+
+MACROS
+  1 Drive → Fold (this is the patch)
+  2 Width → Delay
+  3 Dark → Cutoff
+  4 Shimmer → OSC B
+
+MOD MATRIX
+  • LFO 1 → Dist Drive
+  • Macro 1 → Warp Amt
+
+NOTES
+  Play with one finger and ride Macro 1. The fold is the melody.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_21_Deep_Fold.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_22_Chrome_Wobble.txt
+------------------------------------------------------------
+IMPOSE  22  CHROME WOBBLE
+File        : IMPOSE_22_Chrome_Wobble
+Category    : Wobble / Move
+Key         : A#     Tempo hint 140 BPM
+Tags        : lfo, 1/4, dub
+
+Quarter-note filter wobble, metallic saw. Hold a note and ride Dark.
+
+OSC A
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 5    Detune 14    Blend 50
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.6    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.3
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.2    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.3    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 460 Hz    Reso 28
+  Drive 18    Env Amt +8%
+
+ENV 1 (amp)     A 6 ms   D 200 ms   S 0.86   R 160 ms
+ENV 2 (filter)  A 4 ms   D 180 ms   S 0.4   R 120 ms
+
+LFO 1
+  Rate 1/4    Shape Triangle
+  Dest Filter Cutoff    Amt 55%
+
+FX RACK
+  1. Distortion Tube 28 / 40
+  2. Chorus Mix 10
+  3. Compressor 4:1
+
+MACROS
+  1 Drive → Tube
+  2 Width → Unison
+  3 Dark → Cutoff offset
+  4 Rate → LFO rate (1/4–1/16)
+
+MOD MATRIX
+  • LFO 1 → Filter Cutoff (bipolar)
+
+NOTES
+  Lock LFO to host. Change rate to 1/8 for half-time drops.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_22_Chrome_Wobble.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_23_Silk_Distortion.txt
+------------------------------------------------------------
+IMPOSE  23  SILK DISTORTION
+File        : IMPOSE_23_Silk_Distortion
+Category    : Wobble / Move
+Key         : F     Tempo hint 120 BPM
+Tags        : slow, lfo, warm
+
+Slow sine on the filter, gentle tape. Hypnotic rather than wobbly.
+
+OSC A
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 3    Detune 8    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.56    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.26    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MS2 Low 24    Cutoff 340 Hz    Reso 18
+  Drive 12    Env Amt +10%
+
+ENV 1 (amp)     A 22 ms   D 320 ms   S 0.86   R 300 ms
+ENV 2 (filter)  A 12 ms   D 400 ms   S 0.4   R 220 ms
+
+LFO 1
+  Rate 1/1    Shape Sine
+  Dest Filter Cutoff    Amt 40%
+
+FX RACK
+  1. Distortion Tape 26 / 36
+  2. Chorus Mix 16
+  3. Delay 1/4 Mix 10
+  4. Reverb 6%
+
+MACROS
+  1 Drive → Tape
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Swim → LFO amt
+
+MOD MATRIX
+  • LFO 1 → Filter
+
+NOTES
+  One-bar LFO. Works as a pad-bass under chords.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_23_Silk_Distortion.SerumPreset
+
+
+------------------------------------------------------------
+IMPOSE_24_Analog_Spine.txt
+------------------------------------------------------------
+IMPOSE  24  ANALOG SPINE
+File        : IMPOSE_24_Analog_Spine
+Category    : Wobble / Move
+Key         : C     Tempo hint 126 BPM
+Tags        : pwm, juno, moving
+
+PWM bass with a slow pulse-width LFO. The backbone of a 126 track.
+
+OSC A
+  Wavetable : PWM
+  WT Pos    : 0.22
+  Warp      : PWM  0.35
+  Unison    : 2    Detune 5    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.68    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 4
+  Level     : 0.2    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.32    Pan 0
+NOISE
+  On    Sample Organics / AC hum1    Level 0.05    LP 280 Hz
+
+FILTER
+  Type MG Low 24    Cutoff 320 Hz    Reso 16
+  Drive 14    Env Amt +28%
+
+ENV 1 (amp)     A 8 ms   D 240 ms   S 0.86   R 200 ms
+ENV 2 (filter)  A 4 ms   D 300 ms   S 0.3   R 160 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest OSC A Warp (PWM)    Amt 35%
+
+FX RACK
+  1. Chorus Mix 12 (Juno-ish)
+  2. Tape 20 / 28
+  3. Compressor 3:1
+  4. Delay 1/8 Mix 6
+
+MACROS
+  1 Drive → Tape
+  2 Width → Chorus + Unison
+  3 Dark → Cutoff
+  4 PWM → Warp amt
+
+MOD MATRIX
+  • LFO 1 → OSC A Warp
+  • Env 2 → Filter
+
+NOTES
+  Closest cousin to Memories Imposing without the loud hum. A 126 default bass.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_24_Analog_Spine.SerumPreset
