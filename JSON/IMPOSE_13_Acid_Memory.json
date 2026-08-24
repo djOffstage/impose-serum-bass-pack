@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "acid-memory",
+  "n": 13,
+  "name": "Acid Memory",
+  "slug": "IMPOSE_13_Acid_Memory",
+  "category": "acid",
+  "tags": [
+    "303",
+    "resonance",
+    "house"
+  ],
+  "key": "C",
+  "bpm": 126,
+  "description": "303-style square with a hungry filter envelope. Classic acid, not cartoon.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.32,
+      "warp": "PWM",
+      "warpAmt": 0.18,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.78
+    },
+    "oscB": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "Acid / MG Low 24",
+      "cutoff": "360 Hz",
+      "reso": 62,
+      "drive": 28,
+      "envAmt": "+78%"
+    },
+    "env1": {
+      "a": "2 ms",
+      "d": "120 ms",
+      "s": 0.7,
+      "r": "80 ms"
+    },
+    "env2": {
+      "a": "1 ms",
+      "d": "180 ms",
+      "s": 0.08,
+      "r": "60 ms"
+    },
+    "lfo1": {
+      "rate": "Off",
+      "shape": "Sine",
+      "dest": "—",
+      "amount": "0"
+    },
+    "fx": [
+      "Distortion — Acid / Diode 34 / 45",
+      "EQ — 300 Hz dip if it honks",
+      "Delay 1/8 dotted Mix 8"
+    ],
+    "macros": [
+      "Drive → Dist + Filter Drive",
+      "Width → Delay",
+      "Dark → Cutoff",
+      "Squelch → Reso"
+    ],
+    "matrix": [
+      "Env 2 → Filter Cutoff (main)",
+      "Accent (vel) → Env2 amt"
+    ],
+    "notes": "Program 16th sequences with accent on offbeats. Env 2 is the instrument."
+  }
+}
