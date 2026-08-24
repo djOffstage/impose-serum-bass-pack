@@ -1,0 +1,112 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "ghost-hum",
+  "n": 2,
+  "name": "Ghost Hum",
+  "slug": "IMPOSE_02_Ghost_Hum",
+  "category": "hum",
+  "tags": [
+    "noise",
+    "organic",
+    "dark"
+  ],
+  "key": "A",
+  "bpm": 122,
+  "description": "Thinner oscillator, louder electrical bed. For breakdowns and tension fills.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.2,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.45
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.05,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": -8,
+      "pan": -12,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.2
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": true,
+      "sample": "Organics / AC hum1",
+      "level": 0.26,
+      "lp": "380 Hz"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "150 Hz",
+      "reso": 10,
+      "drive": 12,
+      "envAmt": "+18%"
+    },
+    "env1": {
+      "a": "18 ms",
+      "d": "320 ms",
+      "s": 0.8,
+      "r": "320 ms"
+    },
+    "env2": {
+      "a": "8 ms",
+      "d": "500 ms",
+      "s": 0.2,
+      "r": "220 ms"
+    },
+    "lfo1": {
+      "rate": "1/2",
+      "shape": "Sine",
+      "dest": "Noise Level",
+      "amount": "12%"
+    },
+    "fx": [
+      "EQ — HP 32 Hz",
+      "Chorus — Mix 16",
+      "Compressor — 3:1 slow",
+      "Delay — 1/4, Mix 10"
+    ],
+    "macros": [
+      "Drive → Dist",
+      "Width → Chorus",
+      "Dark → Cutoff",
+      "Hum → Noise"
+    ],
+    "matrix": [
+      "LFO 1 → Noise Level",
+      "Env 2 → Filter"
+    ],
+    "notes": "Ride Macro 4. Keep OSC A quiet so the hum is the character."
+  }
+}
