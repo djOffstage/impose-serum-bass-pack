@@ -1,0 +1,110 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "low-voltage",
+  "n": 18,
+  "name": "Low Voltage",
+  "slug": "IMPOSE_18_Low_Voltage",
+  "category": "eight",
+  "tags": [
+    "short",
+    "clicky",
+    "percussive"
+  ],
+  "key": "C",
+  "bpm": 126,
+  "description": "Short 808 / kick-bass hybrid. Use as a pattern bass, not a drone.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.82
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.12,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.18
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": true,
+      "sample": "One-shots / Click short",
+      "level": 0.12,
+      "lp": "3 kHz"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "300 Hz",
+      "reso": 14,
+      "drive": 12,
+      "envAmt": "+40%"
+    },
+    "env1": {
+      "a": "0 ms",
+      "d": "160 ms",
+      "s": 0.08,
+      "r": "90 ms"
+    },
+    "env2": {
+      "a": "0 ms",
+      "d": "50 ms",
+      "s": 0,
+      "r": "30 ms"
+    },
+    "lfo1": {
+      "rate": "Off",
+      "shape": "Sine",
+      "dest": "—",
+      "amount": "0"
+    },
+    "fx": [
+      "Distortion Tube 22 / 30",
+      "Compressor 6:1 fast",
+      "EQ click 3k +1"
+    ],
+    "macros": [
+      "Drive → Tube",
+      "Punch → Pitch env",
+      "Dark → Cutoff",
+      "Click → Noise"
+    ],
+    "matrix": [
+      "Env 2 → Pitch + Filter"
+    ],
+    "notes": "Program like a kick. Leave space on the 2 and 4 if a real kick is in the track."
+  }
+}
