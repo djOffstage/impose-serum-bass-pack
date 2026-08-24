@@ -1,0 +1,63 @@
+IMPOSE  20  DIRT ORGAN
+File        : IMPOSE_20_Dirt_Organ
+Category    : Distort / Growl
+Key         : A     Tempo hint 118 BPM
+Tags        : organ, harmonic, growl
+
+Drawbar-ish harmonic stack into mild foldback. Church-basement bass.
+
+OSC A
+  Wavetable : Basic Shapes
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.5    Pan 0
+OSC B
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0.28    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 1    Semi 0    Fine 0
+  Level     : 0.12    Pan 10
+NOISE
+  Off
+
+FILTER
+  Type MS2 Low 24    Cutoff 520 Hz    Reso 16
+  Drive 14    Env Amt +18%
+
+ENV 1 (amp)     A 12 ms   D 260 ms   S 0.82   R 220 ms
+ENV 2 (filter)  A 6 ms   D 300 ms   S 0.28   R 160 ms
+
+LFO 1
+  Rate 1/2    Shape Sine
+  Dest OSC C level    Amt 10%
+
+FX RACK
+  1. Distortion Fold 34 / 48
+  2. Chorus Mix 14
+  3. EQ 700 +1 (body)
+  4. Reverb Room 5%
+
+MACROS
+  1 Drive → Fold
+  2 Width → Chorus
+  3 Dark → Cutoff
+  4 Pipe → OSC C
+
+MOD MATRIX
+  • LFO 1 → OSC C Level
+
+NOTES
+  OSC A/B/C are 8', 4', 2' drawbars. Blend, don't unison.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_20_Dirt_Organ.SerumPreset
