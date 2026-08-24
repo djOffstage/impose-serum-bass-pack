@@ -1,0 +1,57 @@
+IMPOSE  18  LOW VOLTAGE
+File        : IMPOSE_18_Low_Voltage
+Category    : 808 / Punch
+Key         : C     Tempo hint 126 BPM
+Tags        : short, clicky, percussive
+
+Short 808 / kick-bass hybrid. Use as a pattern bass, not a drone.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.82    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.12
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : 0    Semi 0    Fine 0
+  Level     : 0.18    Pan 0
+OSC C
+  Off
+NOISE
+  On    Sample One-shots / Click short    Level 0.12    LP 3 kHz
+
+FILTER
+  Type MG Low 24    Cutoff 300 Hz    Reso 14
+  Drive 12    Env Amt +40%
+
+ENV 1 (amp)     A 0 ms   D 160 ms   S 0.08   R 90 ms
+ENV 2 (filter)  A 0 ms   D 50 ms   S 0   R 30 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. Distortion Tube 22 / 30
+  2. Compressor 6:1 fast
+  3. EQ click 3k +1
+
+MACROS
+  1 Drive → Tube
+  2 Punch → Pitch env
+  3 Dark → Cutoff
+  4 Click → Noise
+
+MOD MATRIX
+  • Env 2 → Pitch + Filter
+
+NOTES
+  Program like a kick. Leave space on the 2 and 4 if a real kick is in the track.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_18_Low_Voltage.SerumPreset
