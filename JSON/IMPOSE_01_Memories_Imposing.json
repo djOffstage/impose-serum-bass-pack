@@ -1,0 +1,115 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "memories-imposing",
+  "n": 1,
+  "name": "Memories Imposing",
+  "slug": "IMPOSE_01_Memories_Imposing",
+  "category": "hum",
+  "tags": [
+    "analog",
+    "hum",
+    "tech house",
+    "reference"
+  ],
+  "key": "C",
+  "bpm": 126,
+  "description": "Recreation of the attached AU_MTF patch: analog saw/square spine, AC-hum noise bed, slow imposing filter. The hum stays at 60 Hz while the bass tracks pitch.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.12,
+      "warp": "Sync",
+      "warpAmt": 0.12,
+      "unison": 3,
+      "detune": 8,
+      "blend": 35,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.7
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.28,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 2,
+      "detune": 4,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 6,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.3
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": true,
+      "sample": "Organics / AC hum1",
+      "level": 0.14,
+      "lp": "420 Hz"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "190 Hz",
+      "reso": 18,
+      "drive": 22,
+      "envAmt": "+38%"
+    },
+    "env1": {
+      "a": "10 ms",
+      "d": "280 ms",
+      "s": 0.86,
+      "r": "240 ms"
+    },
+    "env2": {
+      "a": "4 ms",
+      "d": "420 ms",
+      "s": 0.28,
+      "r": "180 ms"
+    },
+    "lfo1": {
+      "rate": "1/1",
+      "shape": "Sine",
+      "dest": "Filter Cutoff",
+      "amount": "8%"
+    },
+    "fx": [
+      "Distortion — Tube, Drive 32, Mix 40",
+      "EQ — Low shelf +2.5 dB @ 75 Hz, dip −1.5 dB @ 280 Hz",
+      "Compressor — 4:1, Attack 28 ms, Makeup +3",
+      "Hyper / Dimension — Mix 10",
+      "Delay — 1/8 dotted, Mix 8, HP 220 Hz"
+    ],
+    "macros": [
+      "Drive → Dist Drive + Filter Drive",
+      "Width → Unison Detune + Hyper Mix",
+      "Dark → Filter Cutoff (invert)",
+      "Hum → Noise Level"
+    ],
+    "matrix": [
+      "Env 2 → Filter Cutoff",
+      "LFO 1 → Filter Cutoff (aux)",
+      "Vel → Amp"
+    ],
+    "notes": "Leave the AC hum un-keyed so it sits at 60 Hz. High-pass the noise around 40 Hz so it does not fight the sub. Play C1–C2, mono, slight glide."
+  }
+}
