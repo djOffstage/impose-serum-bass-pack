@@ -1,0 +1,57 @@
+IMPOSE  05  NIGHT BUS
+File        : IMPOSE_05_Night_Bus
+Category    : Sub / Round
+Key         : C     Tempo hint 126 BPM
+Tags        : tech house, round, 126
+
+Clean round tech-house sub. Sine + barely-there saw. Translates on a club system.
+
+OSC A
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.78    Pan 0
+OSC B
+  Wavetable : Analog / Juno Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 2    Detune 3    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.18    Pan 0
+OSC C
+  Off
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 170 Hz    Reso 8
+  Drive 8    Env Amt +16%
+
+ENV 1 (amp)     A 6 ms   D 180 ms   S 0.9   R 140 ms
+ENV 2 (filter)  A 3 ms   D 220 ms   S 0.35   R 100 ms
+
+LFO 1
+  Rate Off    Shape Sine
+  Dest —    Amt 0
+
+FX RACK
+  1. EQ — Low shelf +1.5 @ 60, HP 28 Hz
+  2. Compressor — 3:1, slow
+  3. Utility — Mono below 140 Hz
+
+MACROS
+  1 Drive → Soft clip
+  2 Width → OSC B level
+  3 Dark → Cutoff
+  4 Click → Env2 amt
+
+MOD MATRIX
+  • Env 2 → Filter Cutoff
+
+NOTES
+  The saw is only there so the sub reads on small speakers. Keep it mono under 140 Hz.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_05_Night_Bus.SerumPreset
