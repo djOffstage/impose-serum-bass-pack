@@ -1,0 +1,64 @@
+IMPOSE  19  PRESSURE COOKER
+File        : IMPOSE_19_Pressure_Cooker
+Category    : Distort / Growl
+Key         : D     Tempo hint 128 BPM
+Tags        : driven, mid, aggressive
+
+Everything into the tube. Mid-bass that shoves a mix forward.
+
+OSC A
+  Wavetable : Dirty Saw
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 3    Detune 10    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.62    Pan 0
+OSC B
+  Wavetable : Basic Shapes
+  WT Pos    : 0.3
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -1    Semi 0    Fine 0
+  Level     : 0.32    Pan 0
+OSC C
+  Wavetable : I Saw The Sine
+  WT Pos    : 0
+  Warp      : Off  0
+  Unison    : 1    Detune 0    Blend 0
+  Octave    : -2    Semi 0    Fine 0
+  Level     : 0.24    Pan 0
+NOISE
+  Off
+
+FILTER
+  Type MG Low 24    Cutoff 460 Hz    Reso 24
+  Drive 36    Env Amt +40%
+
+ENV 1 (amp)     A 5 ms   D 200 ms   S 0.84   R 160 ms
+ENV 2 (filter)  A 2 ms   D 240 ms   S 0.22   R 120 ms
+
+LFO 1
+  Rate 1/8    Shape Sine
+  Dest Drive    Amt 10%
+
+FX RACK
+  1. Distortion Tube Drive 58 Mix 70
+  2. EQ 250 −2 (mud)
+  3. Compressor 6:1
+  4. Clipper ceiling
+
+MACROS
+  1 Drive → Tube
+  2 Width → Unison
+  3 Dark → Cutoff
+  4 Grit → Filter drive
+
+MOD MATRIX
+  • LFO 1 → Dist Drive
+  • Env 2 → Filter
+
+NOTES
+  Watch the 250 Hz build-up. High-pass anything else in that region.
+
+Rebuild in Serum 2 (~2 min): Init patch → set OSC/Filter/Env/LFO/FX → save as
+  Documents/Xfer/Serum 2 Presets/User/IMPOSE/IMPOSE_19_Pressure_Cooker.SerumPreset
