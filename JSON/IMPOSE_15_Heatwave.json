@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "heatwave",
+  "n": 15,
+  "name": "Heatwave",
+  "slug": "IMPOSE_15_Heatwave",
+  "category": "acid",
+  "tags": [
+    "hot",
+    "reso",
+    "peak"
+  ],
+  "key": "G",
+  "bpm": 130,
+  "description": "Resonance pushed into self-oscillation territory. Handle with a high-cut.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0.34,
+      "warp": "PWM",
+      "warpAmt": 0.22,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.64
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Dirty Saw",
+      "level": 0.2
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "Acid",
+      "cutoff": "500 Hz",
+      "reso": 78,
+      "drive": 36,
+      "envAmt": "+70%"
+    },
+    "env1": {
+      "a": "1 ms",
+      "d": "100 ms",
+      "s": 0.68,
+      "r": "70 ms"
+    },
+    "env2": {
+      "a": "0.5 ms",
+      "d": "140 ms",
+      "s": 0.05,
+      "r": "50 ms"
+    },
+    "lfo1": {
+      "rate": "1/8",
+      "shape": "Triangle",
+      "dest": "Reso",
+      "amount": "8%"
+    },
+    "fx": [
+      "Distortion Fold 40 / 52",
+      "EQ — HP 80, LP 6k (protect tweeters)",
+      "Compressor 5:1"
+    ],
+    "macros": [
+      "Drive → Fold",
+      "Width → OSC B",
+      "Dark → Cutoff",
+      "Squelch → Reso"
+    ],
+    "matrix": [
+      "Env 2 → Filter (main)",
+      "LFO 1 → Reso"
+    ],
+    "notes": "Put a safety LP at 6 kHz on the channel. This one screams."
+  }
+}
