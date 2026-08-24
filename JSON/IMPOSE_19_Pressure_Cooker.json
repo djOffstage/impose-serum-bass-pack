@@ -1,0 +1,112 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "pressure-cooker",
+  "n": 19,
+  "name": "Pressure Cooker",
+  "slug": "IMPOSE_19_Pressure_Cooker",
+  "category": "distort",
+  "tags": [
+    "driven",
+    "mid",
+    "aggressive"
+  ],
+  "key": "D",
+  "bpm": 128,
+  "description": "Everything into the tube. Mid-bass that shoves a mix forward.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 3,
+      "detune": 10,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Dirty Saw",
+      "level": 0.62
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0.3,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Basic Shapes",
+      "level": 0.32
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -2,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.24
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "460 Hz",
+      "reso": 24,
+      "drive": 36,
+      "envAmt": "+40%"
+    },
+    "env1": {
+      "a": "5 ms",
+      "d": "200 ms",
+      "s": 0.84,
+      "r": "160 ms"
+    },
+    "env2": {
+      "a": "2 ms",
+      "d": "240 ms",
+      "s": 0.22,
+      "r": "120 ms"
+    },
+    "lfo1": {
+      "rate": "1/8",
+      "shape": "Sine",
+      "dest": "Drive",
+      "amount": "10%"
+    },
+    "fx": [
+      "Distortion Tube Drive 58 Mix 70",
+      "EQ 250 −2 (mud)",
+      "Compressor 6:1",
+      "Clipper ceiling"
+    ],
+    "macros": [
+      "Drive → Tube",
+      "Width → Unison",
+      "Dark → Cutoff",
+      "Grit → Filter drive"
+    ],
+    "matrix": [
+      "LFO 1 → Dist Drive",
+      "Env 2 → Filter"
+    ],
+    "notes": "Watch the 250 Hz build-up. High-pass anything else in that region."
+  }
+}
