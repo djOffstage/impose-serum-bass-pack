@@ -1,0 +1,112 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "velvet-reese",
+  "n": 9,
+  "name": "Velvet Reese",
+  "slug": "IMPOSE_09_Velvet_Reese",
+  "category": "reese",
+  "tags": [
+    "detune",
+    "neuro",
+    "wide"
+  ],
+  "key": "A#",
+  "bpm": 132,
+  "description": "Classic two-saw reese, not screamy. Works in house and DnB at different octaves.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 5,
+      "detune": 18,
+      "blend": 55,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "Analog / Juno Saw",
+      "level": 0.62
+    },
+    "oscB": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": -14,
+      "pan": 8,
+      "wavetable": "Dirty Saw",
+      "level": 0.3
+    },
+    "oscC": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -2,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.28
+    },
+    "noise": {
+      "on": false,
+      "sample": "Off",
+      "level": 0,
+      "lp": "—"
+    },
+    "filter": {
+      "type": "MG Low 24",
+      "cutoff": "480 Hz",
+      "reso": 16,
+      "drive": 16,
+      "envAmt": "+22%"
+    },
+    "env1": {
+      "a": "8 ms",
+      "d": "240 ms",
+      "s": 0.84,
+      "r": "200 ms"
+    },
+    "env2": {
+      "a": "4 ms",
+      "d": "320 ms",
+      "s": 0.3,
+      "r": "160 ms"
+    },
+    "lfo1": {
+      "rate": "1/4",
+      "shape": "Sine",
+      "dest": "Unison Detune",
+      "amount": "6%"
+    },
+    "fx": [
+      "Distortion — Tube 30 / 40",
+      "Chorus — Mix 14",
+      "EQ — 200 Hz dip −1.5",
+      "Compressor 4:1"
+    ],
+    "macros": [
+      "Drive → Tube",
+      "Width → Unison detune",
+      "Dark → Cutoff",
+      "Grit → OSC B"
+    ],
+    "matrix": [
+      "LFO 1 → Unison Detune",
+      "Env 2 → Filter"
+    ],
+    "notes": "Drop an octave for 174 DnB. Keep OSC C mono."
+  }
+}
