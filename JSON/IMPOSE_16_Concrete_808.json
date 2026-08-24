@@ -1,0 +1,111 @@
+{
+  "pack": "IMPOSE",
+  "version": "1.0",
+  "id": "concrete-808",
+  "n": 16,
+  "name": "Concrete 808",
+  "slug": "IMPOSE_16_Concrete_808",
+  "category": "eight",
+  "tags": [
+    "808",
+    "punch",
+    "trap-house"
+  ],
+  "key": "C",
+  "bpm": 128,
+  "description": "Sine 808 with a pitch drop. Hard enough for trap, round enough for house.",
+  "serum": {
+    "oscA": {
+      "on": true,
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": -1,
+      "semi": 0,
+      "fine": 0,
+      "pan": 0,
+      "wavetable": "I Saw The Sine",
+      "level": 0.92
+    },
+    "oscB": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "oscC": {
+      "on": false,
+      "wavetable": "Basic Shapes",
+      "wtPos": 0,
+      "warp": "Off",
+      "warpAmt": 0,
+      "unison": 1,
+      "detune": 0,
+      "blend": 0,
+      "octave": 0,
+      "semi": 0,
+      "fine": 0,
+      "level": 0,
+      "pan": 0
+    },
+    "noise": {
+      "on": true,
+      "sample": "One-shots / Click short",
+      "level": 0.08,
+      "lp": "2.2 kHz"
+    },
+    "filter": {
+      "type": "MG Low 12",
+      "cutoff": "170 Hz",
+      "reso": 6,
+      "drive": 10,
+      "envAmt": "+8%"
+    },
+    "env1": {
+      "a": "0 ms",
+      "d": "420 ms",
+      "s": 0.32,
+      "r": "280 ms"
+    },
+    "env2": {
+      "a": "0 ms",
+      "d": "70 ms",
+      "s": 0,
+      "r": "40 ms"
+    },
+    "lfo1": {
+      "rate": "Off",
+      "shape": "Sine",
+      "dest": "—",
+      "amount": "0"
+    },
+    "fx": [
+      "Distortion Tape 18 / 22",
+      "Compressor 4:1, Attack 8 ms",
+      "EQ 50 Hz +2"
+    ],
+    "macros": [
+      "Drive → Tape",
+      "Punch → Pitch env amt",
+      "Dark → Cutoff",
+      "Click → Noise"
+    ],
+    "matrix": [
+      "Env 2 → OSC A Pitch (+12 to +19 st)",
+      "Env 1 → Amp (exponential)"
+    ],
+    "notes": "Tune per track. Pitch env is Env 2 → pitch, 50–80 ms decay."
+  }
+}
