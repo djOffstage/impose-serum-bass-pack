@@ -1,0 +1,54 @@
+name: Artifact integrity
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-pack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate archives, JSON and FXP payloads
+        shell: python
+        run: |
+          from pathlib import Path
+          import json, zipfile
+
+          fxps = sorted(Path("FXP").glob("*.fxp"))
+          assert fxps, "no FXP presets found"
+          for path in fxps:
+              data = path.read_bytes()
+              assert len(data) > 128, f"{path}: suspiciously small"
+              assert data[:4] == b"CcnK", f"{path}: missing VST CcnK header"
+              print("valid FXP header:", path)
+
+          for path in sorted(Path(".").glob("*.zip")):
+              with zipfile.ZipFile(path) as zf:
+                  bad = zf.testzip()
+                  assert bad is None, f"{path}: corrupt member {bad}"
+                  assert zf.namelist(), f"{path}: empty archive"
+              print("valid ZIP:", path)
+
+          for path in sorted(Path("JSON").rglob("*.json")):
+              with path.open("r", encoding="utf-8") as f:
+                  json.load(f)
+              print("valid JSON:", path)
+
+      - name: Reject unresolved merge markers
+        shell: bash
+        run: |
+          if git grep -n -E '^(<<<<<<< |>>>>>>> )' -- '*.md' '*.txt' '*.json'; then
+            exit 1
+          fi
